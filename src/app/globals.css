@@ -18,9 +18,7 @@ html {
 
 @layer base {
   body {
-    @apply tw-font-primary;
-    @apply tw-bg-background;
-    @apply tw-text-text-color
+    @apply tw-font-primary tw-bg-background tw-text-text-color;
   }
 }
 

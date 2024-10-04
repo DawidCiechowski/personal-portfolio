@@ -4,11 +4,11 @@ import SocialIcon from "@/components/SocialIcons";
 import Image from "next/image";
 
 export default function Home() {
-  const homePageButtons: Array<string> = ["Download CV", "Contact"];
+  const homePageButtons: Array<{text: string, logo?: string}> = [{text: 'Download CV', logo: 'bx bx-download'}, {text:"Contact"}];
   return (
-    <div className="tw-flex tw-items-center tw-justify-center md:tw-gap-[15rem] tw-py-[8rem] xl:tw-py-[12rem] tw-px-[8%]">
+    <div className="lg:tw-flex lg:tw-flex-row tw-items-center tw-flex-col-reverse tw-justify-center lg:tw-gap-[15rem] tw-py-[8rem] lg:tw-py-[12rem] tw-px-[8%]">
       <div className="tw-flex tw-flex-col tw-items-baseline tw-text-left tw-justify-center tw-mt-12">
-        <h1 className="tw-text-[7rem] tw-font-bold tw-mt-6 tw-leading-none">
+        <h1 className="tw-text-[7rem] tw-py-4 tw-font-bold tw-mt-6 tw-leading-none">
           Hey I&apos;m \<br />
           <span className="tw-text-main-color">Dawid Ciechowski;</span>
         </h1>
@@ -29,25 +29,23 @@ export default function Home() {
 
         <div className="tw-flex tw-items-center tw-gap-[1.5rem]">
           {homePageButtons.map((item, index) => (
-            <HomePageButton index={index} key={index}>
-              {item}
-            </HomePageButton>
+            <HomePageButton index={index} key={index} props={item}/>
           ))}
         </div>
 
         <div className="tw-flex tw-items-center tw-gap-[5rem] tw-pt-[6rem]">
-          <Facts value={"5"}>
+          <Facts value={5}>
             <p>
               Years of <br />
               Experience
             </p>
           </Facts>
-          <Facts value={"5"}>
+          <Facts value={200}>
             <p>
               Technologies <br /> Mastered
             </p>
           </Facts>
-          <Facts value={"5"}>
+          <Facts value={30}>
             <p>
               Projects
               <br />
@@ -56,7 +54,7 @@ export default function Home() {
           </Facts>
         </div>
       </div>
-      <div className="tw-rounded-full tw-invisible md:tw-visible">
+      <div className="tw-rounded-full">
         <Image
           className="tw-relative tw-top-12 tw-border-background tw-w-[32vw] tw-rounded-full tw-shadow-glow-sm tw-cursor-pointer tw-duration-[0.4s] tw-ease-in-out hover:tw-shadow-glow-xl"
           src="/dwarf.jpg"
