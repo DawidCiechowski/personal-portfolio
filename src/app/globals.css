@@ -2,26 +2,135 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --bg-color: #000000;
+  --secondary-bg-color: #0B192C;
+  --text-color: #1E3E62;
+  --main-color: #FF6500;
+}
+
+@layer base {
+  body {
+    @apply tw-font-primary;
+    @apply tw-bg-background;
+    @apply tw-text-text-color
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+.bracket{
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--main-color);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+
+.text-animation-span::before {
+    content: "Software Engineer";
+    color: var(--main-color);
+    animation: words 10s infinite;
+    animation-delay: 1s;
+}
+
+.text-animation-span::after {
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor .6s infinite, typing 10s steps(14) infinite;
+    animation-delay: 1s;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+
+@keyframes words {
+    0%,
+    20% {
+        content: "= \"Backend Engineer\";";
+    }
+    21%,
+    40%{
+        content: "= \"Fullstack Engineer\";";
+    }
+    41%,
+    60% {
+        content: "= \"Mobile Engineer\";"
+    }
+    61%,
+    80% {
+        content: "= \"Test Automation Engineer\";";
+    }
+    81%,
+    100% {
+        content: "= \"Gaming Enthusiast\";"
+    }
+}
+
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px)
+    }
+}
+
