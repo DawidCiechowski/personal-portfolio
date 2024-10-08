@@ -35,6 +35,7 @@ const config: Config = {
         'main-color': "var(--main-color)",
       },
       boxShadow: {
+        'glow-tiny': '0 0 10px var(--main-color)',
         'glow-sm': '0 0 25px var(--main-color)',
         'glow-md': '0 0 50px var(--main-color)',
         'glow-lg': '0 0 25px var(--main-color), 0 0 50px var(--main-color)',
@@ -63,6 +64,14 @@ const config: Config = {
       },
       width: {
         'full-p8': 'calc(100% + 8px)'
+      },
+      spacing: {
+        'half-n1px': 'calc(50% - 1px)',
+        'half-n8px': 'calc(50% - 8px)',
+      },
+      padding: {
+        'half-30px': 'calc(50% + 30px)',
+        'half-n8px': 'calc(50% - 8px)',
       }
     },
   },

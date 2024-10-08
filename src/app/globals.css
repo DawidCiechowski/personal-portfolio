@@ -16,6 +16,21 @@ html {
   --main-color: #FF6500;
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    border-radius: 10px;
+    height: 5vw;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 50px;
+}
+
 @layer base {
   body {
     @apply tw-font-primary tw-bg-background tw-text-text-color;
