@@ -25,7 +25,8 @@ const config: Config = {
       xl: '1200px'
     },
     fontFamily: {
-      primary: 'var(--font-oswald)'
+      primary: 'var(--font-oswald)',
+      pixelated: 'var(--font-pixelify-sans)',
     },
     extend: {
       colors: {

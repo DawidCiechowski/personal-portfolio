@@ -16,6 +16,180 @@ html {
   --main-color: #FF6500;
 }
 
+
+
+@layer components {
+    .pixel-corners,
+    .pixel-corners--wrapper {
+    clip-path: polygon(0px calc(100% - 20px),
+        4px calc(100% - 20px),
+        4px calc(100% - 12px),
+        8px calc(100% - 12px),
+        8px calc(100% - 8px),
+        12px calc(100% - 8px),
+        12px calc(100% - 4px),
+        20px calc(100% - 4px),
+        20px 100%,
+        calc(100% - 20px) 100%,
+        calc(100% - 20px) calc(100% - 4px),
+        calc(100% - 12px) calc(100% - 4px),
+        calc(100% - 12px) calc(100% - 8px),
+        calc(100% - 8px) calc(100% - 8px),
+        calc(100% - 8px) calc(100% - 12px),
+        calc(100% - 4px) calc(100% - 12px),
+        calc(100% - 4px) calc(100% - 20px),
+        100% calc(100% - 20px),
+        100% 20px,
+        calc(100% - 4px) 20px,
+        calc(100% - 4px) 12px,
+        calc(100% - 8px) 12px,
+        calc(100% - 8px) 8px,
+        calc(100% - 12px) 8px,
+        calc(100% - 12px) 4px,
+        calc(100% - 20px) 4px,
+        calc(100% - 20px) 0px,
+        20px 0px,
+        20px 4px,
+        12px 4px,
+        12px 8px,
+        8px 8px,
+        8px 12px,
+        4px 12px,
+        4px 20px,
+        0px 20px);
+    position: relative;
+    }
+    .pixel-corners {
+    border: 4px solid transparent;
+    }
+    .pixel-corners--wrapper {
+    width: fit-content;
+    height: fit-content;
+    }
+    .pixel-corners--wrapper .pixel-corners {
+    display: block;
+    clip-path: polygon(4px 20px,
+        8px 20px,
+        8px 12px,
+        12px 12px,
+        12px 8px,
+        20px 8px,
+        20px 4px,
+        calc(100% - 20px) 4px,
+        calc(100% - 20px) 8px,
+        calc(100% - 12px) 8px,
+        calc(100% - 12px) 12px,
+        calc(100% - 8px) 12px,
+        calc(100% - 8px) 20px,
+        calc(100% - 4px) 20px,
+        calc(100% - 4px) calc(100% - 20px),
+        calc(100% - 8px) calc(100% - 20px),
+        calc(100% - 8px) calc(100% - 12px),
+        calc(100% - 12px) calc(100% - 12px),
+        calc(100% - 12px) calc(100% - 8px),
+        calc(100% - 20px) calc(100% - 8px),
+        calc(100% - 20px) calc(100% - 4px),
+        20px calc(100% - 4px),
+        20px calc(100% - 8px),
+        12px calc(100% - 8px),
+        12px calc(100% - 12px),
+        8px calc(100% - 12px),
+        8px calc(100% - 20px),
+        4px calc(100% - 20px));
+    }
+    .pixel-corners::after,
+    .pixel-corners--wrapper::after {
+    content: "";
+    position: absolute;
+    clip-path: polygon(0px calc(100% - 20px),
+        4px calc(100% - 20px),
+        4px calc(100% - 12px),
+        8px calc(100% - 12px),
+        8px calc(100% - 8px),
+        12px calc(100% - 8px),
+        12px calc(100% - 4px),
+        20px calc(100% - 4px),
+        20px 100%,
+        calc(100% - 20px) 100%,
+        calc(100% - 20px) calc(100% - 4px),
+        calc(100% - 12px) calc(100% - 4px),
+        calc(100% - 12px) calc(100% - 8px),
+        calc(100% - 8px) calc(100% - 8px),
+        calc(100% - 8px) calc(100% - 12px),
+        calc(100% - 4px) calc(100% - 12px),
+        calc(100% - 4px) calc(100% - 20px),
+        100% calc(100% - 20px),
+        100% 20px,
+        calc(100% - 4px) 20px,
+        calc(100% - 4px) 12px,
+        calc(100% - 8px) 12px,
+        calc(100% - 8px) 8px,
+        calc(100% - 12px) 8px,
+        calc(100% - 12px) 4px,
+        calc(100% - 20px) 4px,
+        calc(100% - 20px) 0px,
+        20px 0px,
+        20px 4px,
+        12px 4px,
+        12px 8px,
+        8px 8px,
+        8px 12px,
+        4px 12px,
+        4px 20px,
+        0px 20px,
+        0px 50%,
+        4px 50%,
+        4px 20px,
+        8px 20px,
+        8px 12px,
+        12px 12px,
+        12px 8px,
+        20px 8px,
+        20px 4px,
+        calc(100% - 20px) 4px,
+        calc(100% - 20px) 8px,
+        calc(100% - 12px) 8px,
+        calc(100% - 12px) 12px,
+        calc(100% - 8px) 12px,
+        calc(100% - 8px) 20px,
+        calc(100% - 4px) 20px,
+        calc(100% - 4px) calc(100% - 20px),
+        calc(100% - 8px) calc(100% - 20px),
+        calc(100% - 8px) calc(100% - 12px),
+        calc(100% - 12px) calc(100% - 12px),
+        calc(100% - 12px) calc(100% - 8px),
+        calc(100% - 20px) calc(100% - 8px),
+        calc(100% - 20px) calc(100% - 4px),
+        20px calc(100% - 4px),
+        20px calc(100% - 8px),
+        12px calc(100% - 8px),
+        12px calc(100% - 12px),
+        8px calc(100% - 12px),
+        8px calc(100% - 20px),
+        4px calc(100% - 20px),
+        4px 50%,
+        0px 50%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:var(--main-color);
+    display: block;
+    pointer-events: none;
+    }
+    .pixel-corners::after {
+    margin: -4px;
+    }
+
+    .active-skill-button {
+        @apply tw-mt-[3rem] tw-border-2 tw-shadow-glow-sm tw-border-main-color tw-bg-main-color tw-font-bold tw-text-black tw-rounded-lg tw-w-[50%] tw-h-[5rem] tw-text-[3rem] tw-flex tw-items-center tw-justify-center tw-duration-300 hover:tw-scale-110 hover:tw-shadow-glow-md hover:tw-text-[3.2rem]
+    }
+
+    .inactive-skill-button {
+        @apply tw-mt-[3rem] tw-border-2 tw-shadow-glow-sm tw-border-main-color tw-bg-text-color tw-font-bold tw-text-main-color tw-rounded-lg tw-w-[50%] tw-h-[5rem] tw-text-[3rem] tw-flex tw-items-center tw-justify-center tw-duration-300 hover:tw-scale-110 hover:tw-shadow-glow-md hover:tw-text-[3.2rem] hover:tw-text-black hover:tw-bg-main-color
+    }
+}
+
 ::-webkit-scrollbar {
     width: 15px;
 }

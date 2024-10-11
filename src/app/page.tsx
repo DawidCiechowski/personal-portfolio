@@ -33,7 +33,6 @@ export default function Home() {
           excited to bring my technical skills and love for learning new technologies together to
           create something amazing!
         </p>
-
         <div>
           <SocialIcon
             href={"https://www.linkedin.com/in/dawid-ciechowski/"}

@@ -70,6 +70,7 @@ export enum Icons {
     REACT = 'devicon-react-plain',
     TAILWIND = 'devicon-tailwindcss-plain',
     EXPRESS = 'devicon-express-plain',
+    MENU = 'bx bx-menu',
 }
 
 export const workExperience = [
@@ -131,7 +132,7 @@ export const workExperience = [
             `Prepared teaching materials and homework assignments, and evaluated student work.`,
             `Led weekly instructional sessions and provided ongoing support to students.`,
         ],
-        nda: true,
+        nda: false,
         techStack: [
             Icons.PYTHON, Icons.PANDAS, Icons.NUMPY
         ]

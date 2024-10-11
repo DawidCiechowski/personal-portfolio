@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Oswald } from "next/font/google";
+import { Oswald, Pixelify_Sans } from "next/font/google";
 import "./globals.css";
 
 //components
@@ -11,6 +11,12 @@ const oswaldSans = Oswald({
   weight: ["200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-oswald",
+});
+
+const pixelifySans = Pixelify_Sans({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-pixelify-sans",
 });
 export const metadata: Metadata = {
   title: "Dawid Ciechowski - Portfolio",
@@ -31,7 +37,7 @@ export default function RootLayout({
         ></link>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"></link>
       </head>
-      <body className={oswaldSans.variable}>
+      <body className={`${oswaldSans.variable} ${pixelifySans.variable}`}>
         <Header />
         <TransitionEffect />
         <PageTransition>{children}</PageTransition>

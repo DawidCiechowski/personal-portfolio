@@ -3,7 +3,7 @@ import { educationData } from "@/utils/constants";
 
 const Education = () => {
   return (
-    <div className=" tw-py-[10rem] tw-px-[12%] tw-flex tw-flex-col tw-items-center tw-justify-center tw-w-screen">
+    <div className=" tw-py-[10rem] tw-px-[12%] tw-flex tw-flex-col tw-items-center tw-justify-center tw-w-screen tw-font-pixelated">
       <h1 className="tw-text-[4rem] md:tw-text-[8rem] tw-text-center tw-my-[5rem] tw-mx-0 tw-text-main-color">
         Education<span className="tw-text-text-color">;</span>
       </h1>
