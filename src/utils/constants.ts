@@ -46,31 +46,120 @@ export const educationData = [
 
 
 export enum Icons {
-    LINKEDIN = 'bx bxl-linkedin',
-    GITHUB = 'bx bxl-github',
-    DOWNLOAD = 'bx bx-download',
-    PYTHON = 'bx bxl-python',
-    TYPESCRIPT = 'bx bxl-typescript',
-    POSTGRES = 'bx bxl-postgresql',
-    DOCKER = 'bx bxl-docker',
-    JAVA = 'bx bxl-java',
-    GO = 'bx bxl-go-lang',
-    JS = 'bx bxl-javascript',
-    GRAPHQL = 'bx bxl-graphql',
-    NODE = 'bx bxl-nodejs',
-    PANDAS = 'devicon-pandas-plain',
-    NUMPY = 'devicon-numpy-plain',
-    FLASK = 'devicon-flask-plain',    
-    ANDROID = 'devicon-android-plain',
-    RABBIT_MQ = 'devicon-rabbitmq-plain',
-    FASTAPI = 'devicon-fastapi-plain',
-    PYTEST = 'devicon-pytest-plain',
-    JEST = 'devicon-jest-plain',
-    MOCHA = 'devicon-mocha-plain',
-    REACT = 'devicon-react-plain',
-    TAILWIND = 'devicon-tailwindcss-plain',
-    EXPRESS = 'devicon-express-plain',
-    MENU = 'bx bx-menu',
+    LINKEDIN = 'bx bxl-linkedin', 
+    GITHUB = 'bx bxl-github', 
+    DOWNLOAD = 'bx bx-download', 
+    PYTHON = 'bx bxl-python', 
+    TYPESCRIPT = 'bx bxl-typescript', 
+    POSTGRES = 'bx bxl-postgresql', 
+    DOCKER = 'bx bxl-docker', 
+    JAVA = 'bx bxl-java', 
+    GO = 'bx bxl-go-lang', 
+    JS = 'bx bxl-javascript', 
+    GRAPHQL = 'bx bxl-graphql', 
+    NODE = 'bx bxl-nodejs', 
+    PANDAS = 'devicon-pandas-plain', 
+    NUMPY = 'devicon-numpy-plain', 
+    FLASK = 'devicon-flask-plain',     
+    ANDROID = 'devicon-android-plain', 
+    RABBIT_MQ = 'devicon-rabbitmq-plain', 
+    FASTAPI = 'devicon-fastapi-plain', 
+    PYTEST = 'devicon-pytest-plain', 
+    JEST = 'devicon-jest-plain', 
+    MOCHA = 'devicon-mocha-plain', 
+    REACT = 'devicon-react-plain', 
+    TAILWIND = 'devicon-tailwindcss-plain', 
+    EXPRESS = 'devicon-express-original colored', 
+    MENU = 'bx bx-menu', 
+    MENU_LEFT = 'bx bx-menu-alt-left',
+    BASH = 'devicon-bash-plain', 
+    FLUTTER = 'devicon-flutter-plain', 
+    KUBERNETES = 'devicon-kubernetes-plain', 
+    DJANGO = 'devicon-django-plain', 
+    NEXTJS = 'devicon-nextjs-plain', 
+    NGINX = 'devicon-nginx-plain', 
+    PROCESSING = 'devicon-processing-plain', 
+    P5JS = 'devicon-p5js-plain', 
+    DART= 'devicon-dart-plain', 
+    MATPLOTLIB = 'devicon-matplotlib-plain',
+    MONGODB = 'devicon-mongodb-plain',
+}
+
+export class TechStackRefs {
+    static readonly GITHUB = `https://www.github.com`;
+    static readonly PYTHON = `https://www.python.org`;
+    static readonly TYPESCRIPT = `https://www.typescriptlang.org`;
+    static readonly POSTGRES = `https://www.postgresql.org`;
+    static readonly DOCKER = `https://www.docker.com`;
+    static readonly JAVA = `https://www.java.com/en/`;
+    static readonly GO = `https://go.dev`;
+    static readonly JS = `https://developer.mozilla.org/en-US/docs/Web/JavaScript`;
+    static readonly GRAPHQL = `https://graphql.org`;
+    static readonly NODE = `https://nodejs.org/en`;
+    static readonly PANDAS = `https://pandas.pydata.org`;
+    static readonly NUMPY = `https://numpy.org`;
+    static readonly FLASK = `https://flask.palletsprojects.com/en/3.0.x/`;
+    static readonly ANDROID = `https://www.android.com`;
+    static readonly RABBIT_MQ = `https://www.rabbitmq.com`;
+    static readonly FASTAPI = `https://fastapi.tiangolo.com`;
+    static readonly PYTEST = `https://docs.pytest.org/en/stable/#`;
+    static readonly JEST = `https://jestjs.io`;
+    static readonly MOCHA = `https://mochajs.org`;
+    static readonly REACT = `https://react.dev`;
+    static readonly TAILWIND = `https://tailwindcss.com`;
+    static readonly EXPRESS = `https://expressjs.com`;
+    static readonly BASH = `https://www.gnu.org/software/bash/`;
+    static readonly FLUTTER = `https://flutter.dev`;
+    static readonly KUBERNETES = `https://kubernetes.io`;
+    static readonly DJANGO = `https://www.djangoproject.com`;
+    static readonly NEXTJS = `https://nextjs.org`;
+    static readonly NGINX = `https://nginx.org/en`;
+    static readonly PROCESSING = `https://processing.org`;
+    static readonly P5JS = `https://p5js.org`;
+    static readonly DART = `https://dart.dev`;
+    static readonly MATPLOTLIB = `https://matplotlib.org`;
+    static readonly MONGODB = `https://www.mongodb.com`;
+}
+
+export const skills = {
+    professional: {
+        title: 'Professional Experience',
+        text: "Below is a list of skills, frameworks and technologies that I've used in professional work environment in various capacities.",
+        skills: {
+            programmingLanguages: [{icon: Icons.PYTHON, refs: TechStackRefs.PYTHON}, {icon: Icons.TYPESCRIPT, refs: TechStackRefs.TYPESCRIPT}, {icon: Icons.JS, refs: TechStackRefs.JS}, {icon: Icons.JAVA, refs: TechStackRefs.JAVA}],
+            backend: [{icon: Icons.GRAPHQL, refs: TechStackRefs.GRAPHQL}, {icon: Icons.RABBIT_MQ, refs: TechStackRefs.RABBIT_MQ}, {icon: Icons.FLASK, refs: TechStackRefs.FLASK}, {icon: Icons.FASTAPI, refs: TechStackRefs.FASTAPI}, {icon: Icons.EXPRESS, refs: TechStackRefs.EXPRESS}],
+            frontend: [{icon: Icons.REACT, refs: TechStackRefs.REACT}],
+            databases: [{icon: Icons.POSTGRES, refs: TechStackRefs.POSTGRES}],
+            testFrameworks: [{icon: Icons.PYTEST, refs: TechStackRefs.PYTEST}, {icon: Icons.JEST, refs: TechStackRefs.JEST}, {icon: Icons.MOCHA, refs: TechStackRefs.MOCHA}],
+            dataScience: [{icon: Icons.PANDAS, refs: TechStackRefs.PANDAS}, {icon: Icons.NUMPY, refs: TechStackRefs.NUMPY}],
+            mobile: [{icon: Icons.ANDROID, refs: TechStackRefs.ANDROID}],
+            container: [{icon: Icons.DOCKER, refs: TechStackRefs.DOCKER}],
+            runtime: [{icon: Icons.NODE, refs: TechStackRefs.NODE}],
+            webServer: [{icon: Icons.NGINX, refs: TechStackRefs.NGINX}],
+            visualization: [{icon: Icons.MATPLOTLIB, refs: TechStackRefs.MATPLOTLIB}],
+            other: [{icon: Icons.GITHUB, refs: TechStackRefs.GITHUB}, {icon: Icons.BASH, refs: TechStackRefs.BASH}],
+        }
+    },
+    personal: {
+        title: 'Personal Experience',
+        text: "Below is a list of skills, frameworks and technologies that I've had a chance to work with and learn in my personal projects and time. Although I do not have professional hands-on experience with those, I feel adamant that I would be able to use them effectively in any work environment. Technologies showcased here do not include the professional ones, for obvious reasons. :D",
+        skills: {
+            programmingLanguages: [{icon: Icons.GO, refs: TechStackRefs.GO}, {icon: Icons.DART, refs: TechStackRefs.DART}],
+            backend: [],
+            frontend: [{icon: Icons.TAILWIND, refs: TechStackRefs.TAILWIND}, {icon: Icons.DJANGO, refs: TechStackRefs.DJANGO}, {icon: Icons.NEXTJS, refs: TechStackRefs.NEXTJS}],
+            dataScience: [],
+            databases: [{icon: Icons.MONGODB, refs: TechStackRefs.MONGODB}],
+            testFrameworks: [],
+            mobile: [{icon: Icons.FLUTTER, refs: TechStackRefs.FLUTTER},],
+            container: [{icon: Icons.KUBERNETES, refs: TechStackRefs.KUBERNETES}],
+            runtime: [],
+            webServer: [],
+            visualization: [{icon: Icons.PROCESSING, refs: TechStackRefs.PROCESSING}, {icon: Icons.P5JS, refs: TechStackRefs.P5JS}],
+            other: [],
+        }
+        //[Icons.GO, Icons.DART, Icons.TAILWIND, Icons.FLUTTER, Icons.KUBERNETES, Icons.DJANGO, Icons.NEXTJS, Icons.PROCESSING, Icons.P5JS]
+
+    }
 }
 
 export const workExperience = [
@@ -90,7 +179,7 @@ export const workExperience = [
             `Mobile UI and API test automation software.`],
         nda: true,
         techStack: [
-            Icons.DOCKER, Icons.PYTHON, Icons.TYPESCRIPT, Icons.JAVA, Icons.DOCKER, Icons.GRAPHQL, Icons.GITHUB, Icons.NODE, Icons.FASTAPI, Icons.PYTEST, Icons.JEST, Icons.MOCHA, Icons.REACT, Icons.TAILWIND, Icons.EXPRESS
+            Icons.DOCKER, Icons.PYTHON, Icons.TYPESCRIPT, Icons.JAVA, Icons.DOCKER, Icons.GRAPHQL, Icons.BASH, Icons.GITHUB, Icons.NODE, Icons.FASTAPI, Icons.PYTEST, Icons.JEST, Icons.MOCHA, Icons.REACT, Icons.TAILWIND, Icons.EXPRESS
         ]
     }, 
     {
@@ -106,7 +195,7 @@ export const workExperience = [
         ],
         nda: true,
         techStack: [
-            Icons.DOCKER, Icons.GITHUB, Icons.PYTHON, Icons.TYPESCRIPT, Icons.JS, Icons.JAVA, Icons.POSTGRES, Icons.GRAPHQL, Icons.ANDROID, Icons.JEST
+            Icons.DOCKER, Icons.GITHUB, Icons.PYTHON, Icons.TYPESCRIPT, Icons.JS, Icons.BASH, Icons.JAVA, Icons.POSTGRES, Icons.GRAPHQL, Icons.ANDROID, Icons.JEST
         ]
     },
     {
@@ -120,7 +209,7 @@ export const workExperience = [
         ],
         nda: true,
         techStack: [
-            Icons.DOCKER, Icons.GITHUB, Icons.PYTHON, Icons.TYPESCRIPT, Icons.JS, Icons.JAVA, Icons.POSTGRES, Icons.GRAPHQL, Icons.ANDROID, Icons.PYTEST
+            Icons.DOCKER, Icons.GITHUB, Icons.PYTHON, Icons.TYPESCRIPT, Icons.JS, Icons.BASH, Icons.JAVA, Icons.POSTGRES, Icons.GRAPHQL, Icons.ANDROID, Icons.PYTEST
         ]
     },
     {
@@ -134,7 +223,7 @@ export const workExperience = [
         ],
         nda: false,
         techStack: [
-            Icons.PYTHON, Icons.PANDAS, Icons.NUMPY
+            Icons.PYTHON, Icons.PANDAS, Icons.NUMPY, Icons.MATPLOTLIB
         ]
     },
     {
@@ -150,7 +239,7 @@ export const workExperience = [
         ],
         nda: false,
         techStack: [
-            Icons.DOCKER, Icons.PYTHON, Icons.POSTGRES, Icons.PANDAS, Icons.NUMPY, Icons.FLASK, Icons.RABBIT_MQ, Icons.FASTAPI, Icons.PYTEST
+            Icons.DOCKER, Icons.PYTHON, Icons. MATPLOTLIB, Icons.POSTGRES, Icons.NGINX, Icons.BASH, Icons.PANDAS, Icons.NUMPY, Icons.FLASK, Icons.RABBIT_MQ, Icons.FASTAPI, Icons.PYTEST
         ]
     },
 ]

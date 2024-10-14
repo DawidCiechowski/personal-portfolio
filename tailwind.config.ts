@@ -21,8 +21,8 @@ const config: Config = {
     screens: {
       sm: '640px',
       md: '768px',
-      lg: '960px',
-      xl: '1200px'
+      lg: '1024px',
+      xl: '1280px'
     },
     fontFamily: {
       primary: 'var(--font-oswald)',
@@ -34,6 +34,9 @@ const config: Config = {
         secondary: "var(--secondary-bg-color)",
         'text-color': "var(--text-color)",
         'main-color': "var(--main-color)",
+      },
+      backgroundImage: {
+        'dwarf': "url('/dwarf.jpg')"
       },
       boxShadow: {
         'glow-tiny': '0 0 10px var(--main-color)',

@@ -1,5 +1,7 @@
 'use client';
 
+import SkillsTab from "@/components/SkillsTab";
+import { skills } from "@/utils/constants";
 import React from "react";
 
 enum SkillType {
@@ -8,11 +10,13 @@ enum SkillType {
 }
 
 const Skills = () => {
-    const [skillType, setSkillType] = React.useState(SkillType.Professional)
+    const [skillType, setSkillType] = React.useState(SkillType.Professional);
+    const professional = skills.professional;
+    const personal = skills.personal;
 
     return (
-      <div className="tw-grid tw-grid-cols-2 tw-py-[10rem] tw-px-[12%] tw-w-screen">
-        <div className="tw-items-center tw-justify-center tw-flex tw-flex-col tw-h-[50vh] tw-rounded-xl ">
+      <div className="tw-flex tw-flex-col lg:tw-grid lg:tw-grid-cols-2 lg:tw-py-[10rem] tw-px-[12%] tw-min-h-[70vh] tw-w-screen">
+        <div className="tw-items-center tw-justify-center tw-flex tw-flex-col tw-pt-[4rem] lg:tw-pt-0 lg:tw-h-[50vh]">
           <button
             onClick={() => setSkillType(SkillType.Professional)}
             className={`${
@@ -34,7 +38,12 @@ const Skills = () => {
             Personal
           </button>
         </div>
-        <div>World</div>
+        <div className="tw-items-center tw-justify-center tw-flex tw-flex-col tw-mt-10 lg:tw-h-[50vh]">
+          {skillType === SkillType.Professional && (
+            <SkillsTab title={professional.title} text={professional.text} skills={professional.skills}/>
+          )}
+          {skillType === SkillType.Personal && <SkillsTab title={personal.title} text={personal.text} skills={personal.skills} />}
+        </div>
       </div>
     );
 }

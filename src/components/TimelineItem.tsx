@@ -15,8 +15,8 @@ interface TimelineItemProps {
 const TimelineItem: React.FC<TimelineItemProps> = (props) => {
     const isOdd = ((props.index + 1) & 1) === 1;
     return (
-        <div className={`tw-mb-[40px] tw-w-full tw-relative ${isOdd ? 'tw-pr-half-30px' : 'tw-pl-half-30px'}`}>
-            <div className="tw-h-[21px] tw-w-[21px] tw-bg-main-color tw-shadow-glow-lg tw-absolute tw-left-half-n8px tw-rounded-full tw-top-[10px]"></div>
+        <div className={`tw-mb-[40px] tw-w-full tw-relative ${isOdd ? 'md:tw-pr-half-30px' : 'md:tw-pl-half-30px'}`}>
+            <div className="tw-hidden md:tw-block tw-h-[21px] tw-w-[21px] tw-bg-main-color tw-shadow-glow-lg tw-absolute tw-left-half-n8px tw-rounded-full tw-top-[10px]"></div>
             <div className="tw-text-[20px] tw-font-bold tw-text-white tw-mt-[6px] tw-mx-0 tw-mb-[15px]">{props.date}</div>
             <div className="tw-bg-background tw-border-[3px] tw-py-[30px] tw-px-[50px] tw-rounded-[4rem] tw-shadow-glow-tiny tw-border-solid tw-border-main-color tw-duration-300 tw-ease-in-out hover:tw-scale-105 hover:tw-shadow-glow-sm">
                 <h2 className="tw-text-[24px] tw-text-white tw-mt-0 tw-mx-0 tw-mb-[10px] tw-border-b-4 tw-rounded-lg tw-border-main-color">{props.role}</h2>
@@ -31,7 +31,7 @@ const TimelineItem: React.FC<TimelineItemProps> = (props) => {
                     }
                 </ul>
                 {props.nda ? <div className="tw-text-white tw-text-[1.2rem] tw-italic tw-py-2">NDA - cannot disclose further details</div> : <></>}
-                <div className="tw-pt-3 tw-grid tw-grid-cols-2 tw-gap-16 md:tw-gap-0 md:tw-grid-cols-4 tw-items-center tw-justify-center tw-text-main-color tw-font-semibold tw-text-[5rem]">
+                <div className="tw-pt-3 tw-grid tw-gap-16 md:tw-gap-0 tw-grid-cols-4 tw-items-center tw-justify-center tw-text-main-color tw-font-semibold tw-text-[5rem]">
                     {
                         props.techStack.map((item, index) => {
                             return (

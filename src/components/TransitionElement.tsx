@@ -32,7 +32,7 @@ const TransitionElement = () => {
               ease: "easeInOut",
               delay: reverseIndex(index) * 0.1,
             }}
-            className="tw-h-full tw-w-full tw-bg-secondary tw-relative"
+            className="tw-h-full tw-w-full tw-bg-gradient-to-b tw-from-slate-900 tw-to-slate-800 tw-relative"
           />
         );
       })}

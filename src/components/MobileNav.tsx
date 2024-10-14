@@ -1,87 +1,51 @@
 "use client";
 
-import { navigationLinks } from "@/utils/constants";
 import { usePathname } from "next/navigation";
+import { Icons, navigationLinks } from "@/utils/constants";
 import React from "react";
+import Link from "next/link";
 
 const MobileNav = () => {
   const pathName = usePathname();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <nav className="lg:tw-px-16 tw-px-6 tw-bg-white tw-shadow-md tw-flex tw-flex-wrap tw-items-center lg:tw-py-0 tw-py-2">
-      <label
-        htmlFor="menu-toggle"
-        className="tw-cursor-pointer lg:tw-hidden block"
-      >
-        <svg
-          className="tw-fill-current tw-text-gray-900"
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-        >
-          <title>menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-        </svg>
-      </label>
-      <input className="tw-hidden" type="checkbox" id="menu-toggle" />
+    <nav className="tw-bg-black tw-text-[4rem] tw-p-4">
+      <div className="tw-flex tw-justify-between tw-items-center">
+        <div>
+          <button
+            className="tw-text-white tw-focus:outline-none z-50"
+            onClick={toggleMenu}
+          >
+            <i className={`${isMenuOpen ? Icons.MENU_LEFT : Icons.MENU}`}></i>
+          </button>
+        </div>
+      </div>
       <div
-        className="tw-hidden lg:tw-flex lg:tw-items-center lg:tw-w-auto tw-w-full"
-        id="menu"
+        className={`tw-absolute tw-left-0 tw-w-full tw-mt-[4rem] tw-bg-gradient-to-b tw-z-[6] tw-from-black tw-to-slate-800 tw-transition-all tw-duration-500 tw-ease-in-out tw-overflow-hidden ${
+          isMenuOpen ? "tw-top-16 tw-max-h-screen" : "tw-top-16 tw-max-h-0"
+        } z-40`}
       >
-        <nav>
-          <ul className="tw-text-xl tw-text-center tw-items-center tw-gap-x-5 tw-pt-4 md:tw-gap-x-4 lg:tw-text-lg lg:tw-flex  lg:tw-pt-0">
-            <li className="tw-py-2 lg:tw-py-0 ">
-              <a
-                className="tw-text-red-600 hover:tw-pb-4 hover:tw-border-b-4 hover:tw-border-yellow-400"
-                href="#"
-              >
-                Blog
-              </a>
-            </li>
-            <li className="tw-py-2 lg:tw-py-0 ">
-              <a
-                className="tw-text-red-600 hovetw-r:pb-4 hover:tw-border-b-4 hover:tw-border-yellow-400"
-                href="#"
-              >
-                Projects
-              </a>
-            </li>
-            <li className="tw-py-2 lg:tw-py-0 ">
-              <a
-                className="tw-text-red-600 hover:tw-pb-4 hover:tw-border-b-4 hover:tw-border-yellow-400"
-                href="#"
-              >
-                Apps
-              </a>
-            </li>
-            <li className="tw-py-2 lg:tw-py-0 ">
-              <a
-                className="tw-text-red-600 hover:tw-pb-4 hover:tw-border-b-4 hover:tw-border-yellow-400"
-                href="#"
-              >
-                Designs
-              </a>
-            </li>
-            <li className="tw-py-2 lg:tw-py-0 ">
-              <a
-                className="tw-text-red-600 hover:tw-pb-4 hover:tw-border-b-4 hover:tw-border-yellow-400"
-                href="#"
-              >
-                My Journey
-              </a>
-            </li>
-            <li className="tw-py-2 lg:tw-py-0 ">
-              <a
-                className="tw-text-red-600 hover:tw-pb-4 hover:tw-border-b-4 hover:tw-border-yellow-400"
-                href="#"
-              >
-                About
-              </a>
-            </li>
-          </ul>
-        </nav>
+        {navigationLinks.map((link, index) => {
+          return (
+            <Link
+              href={link.path}
+              className={`tw-text-[1.8rem] tw-font-semibold tw-block tw-p-4 ${
+                pathName === link.path
+                  ? "tw-text-main-color tw-border-b-[3px] tw-border-solid tw-border-main-color tw-duration-300 tw-ease-in-out tw"
+                  : "tw-text-text-color hover:tw-text-main-color hover:tw-border-main-color hover:tw-border-b-[3px] hover:tw-border-solid tw-duration-300 tw-ease-linear tw-border-b-[3px] tw-border-solid tw-border-transparent"
+              }`}
+              key={index}
+              onClick={toggleMenu}
+            >
+              {link.name}
+            </Link>
+          );
+        })}
       </div>
     </nav>
   );

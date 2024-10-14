@@ -8,7 +8,7 @@ export default function Header() {
       <div className="tw-container tw-mx-auto tw-flex tw-justify-between tw-items-center">
         <Logo></Logo>
 
-        <div className="tw-hidden md:tw-flex tw-items-center tw-gap-8">
+        <div className="sm:tw-flex tw-items-center tw-gap-8">
           <Nav />
         </div>
 

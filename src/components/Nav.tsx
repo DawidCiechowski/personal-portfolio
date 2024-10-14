@@ -7,7 +7,7 @@ import { navigationLinks } from "@/utils/constants";
 export default function Nav() {
   const pathname = usePathname();
   return (
-    <nav className="tw-hidden xl:tw-flex">
+    <nav className="tw-hidden md:tw-flex">
       {navigationLinks.map((link, index) => {
         return (
           <Link

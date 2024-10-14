@@ -16,7 +16,7 @@ const TransitionEffect = () => {
           </div>
 
           <motion.div
-            className="tw-h-screen tw-w-screen tw-fixed tw-bg-background tw-top-0 tw-pointer-events-none tw-z-[5]"
+            className="tw-h-screen tw-w-screen tw-fixed tw-bg-gradient-to-b tw-from-black tw-to-slate-900 tw-top-0 tw-pointer-events-none tw-z-[5]"
             initial={{ opacity: 1 }}
             animate={{
               opacity: 0,

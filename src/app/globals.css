@@ -207,7 +207,7 @@ html {
 
 @layer base {
   body {
-    @apply tw-font-primary tw-bg-background tw-text-text-color;
+    @apply tw-font-primary tw-bg-gradient-to-b tw-from-black tw-to-slate-900 tw-text-text-color tw-min-h-screen;
   }
 }
 
@@ -256,11 +256,11 @@ html {
 
 .text-animation-span::after {
     content: "";
-    background-color: var(--bg-color);
+    background-image: linear-gradient(#080a18, #020617);
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    border-left: 3px solid var(--bg-color);
+    border-left: 3px solid linear-gradient(black, #020617);
     right: -8px;
     animation: cursor .6s infinite, typing 10s steps(14) infinite;
     animation-delay: 1s;
