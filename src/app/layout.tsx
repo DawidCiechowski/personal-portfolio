@@ -11,12 +11,14 @@ const oswaldSans = Oswald({
   weight: ["200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-oswald",
+  display: 'swap'
 });
 
 const pixelifySans = Pixelify_Sans({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-pixelify-sans",
+  display: 'swap'
 });
 export const metadata: Metadata = {
   title: "Dawid Ciechowski - Portfolio",
