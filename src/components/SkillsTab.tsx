@@ -36,7 +36,7 @@ const SkillTab: React.FC<{skillType: string, items: Array<unknown>}> = ({skillTy
       <div className="tw-pt-3 tw-grid tw-grid-cols-3 tw-gap-16 md:tw-gap-0 md:tw-grid-cols-4 tw-items-center tw-justify-center tw-text-main-color tw-font-semibold tw-text-[5rem]">
         {items.map((item, index) => {
           return (
-            //@ts-expect-error
+            //@ts-expect-error Gotta add proper types
             <SkillShowcase key={index} item={item} index={index} />
           )
         })}
@@ -49,67 +49,67 @@ const SkillsTab: React.FC<SkillsTabProps> = ({title, text, skills}) => {
   const skillTypes = [
     {
       name: "Programming Languages",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.programmingLanguages,
     },
     {
       name: "Backend",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.backend,
     },
     {
       name: "Frontend",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.frontend,
     },
     {
       name: "Databases",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.databases,
     },
     {
       name: "Test Frameworks",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.testFrameworks,
     },
     {
       name: "Data Science Frameworks",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.dataScience,
     },
     {
       name: "Mobile",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.mobile,
     },
     {
       name: "Containers",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.container,
     },
     {
       name: "Dependency Management Frameworks",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.dependencyManagement,
     },
     {
       name: "Runtime",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.runtime,
     },
     {
       name: "Web Servers",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.webServer,
     },
     {
       name: "Visualization Frameworks",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.visualization,
     },
     {
       name: "Other",
-      //@ts-expect-error
+      //@ts-expect-error Gotta add proper types
       skills: skills.other,
     },
   ];
