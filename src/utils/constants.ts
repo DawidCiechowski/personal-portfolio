@@ -83,6 +83,13 @@ export enum Icons {
     DART= 'devicon-dart-plain', 
     MATPLOTLIB = 'devicon-matplotlib-plain',
     MONGODB = 'devicon-mongodb-plain',
+    CSHARP = 'devicon-csharp-plain',
+    POETRY = 'devicon-poetry-plain',
+    NPM = 'devicon-npm-original-wordmark colored',
+    YARN = 'devicon-yarn-plain',
+    GRADLE = 'devicon-gradle-plain',
+    MAVEN = 'devicon-maven-plain',
+    PYPI = 'devicon-pypi-plain',
 }
 
 export class TechStackRefs {
@@ -119,12 +126,19 @@ export class TechStackRefs {
     static readonly DART = `https://dart.dev`;
     static readonly MATPLOTLIB = `https://matplotlib.org`;
     static readonly MONGODB = `https://www.mongodb.com`;
+    static readonly CSHARP = `https://learn.microsoft.com/en-us/dotnet/csharp/`;
+    static readonly POETRY = 'https://python-poetry.org';
+    static readonly NPM = 'https://www.npmjs.com';
+    static readonly YARN = 'https://yarnpkg.com';
+    static readonly GRADLE = 'https://gradle.org';
+    static readonly MAVEN = 'https://maven.apache.org';
+    static readonly PYPI = 'https://pypi.org';
 }
 
 export const skills = {
     professional: {
         title: 'Professional Experience',
-        text: "Below is a list of skills, frameworks and technologies that I've used in professional work environment in various capacities.",
+        text: "Below is a list of skills, frameworks, and technologies that I've used in a professional work environment in various capacities. It is possible that I have forgotten some technologies (or couldn't find a good enough icon for them 😅), so this list is not definitive and will be updated occasionally.",
         skills: {
             programmingLanguages: [{icon: Icons.PYTHON, refs: TechStackRefs.PYTHON}, {icon: Icons.TYPESCRIPT, refs: TechStackRefs.TYPESCRIPT}, {icon: Icons.JS, refs: TechStackRefs.JS}, {icon: Icons.JAVA, refs: TechStackRefs.JAVA}],
             backend: [{icon: Icons.GRAPHQL, refs: TechStackRefs.GRAPHQL}, {icon: Icons.RABBIT_MQ, refs: TechStackRefs.RABBIT_MQ}, {icon: Icons.FLASK, refs: TechStackRefs.FLASK}, {icon: Icons.FASTAPI, refs: TechStackRefs.FASTAPI}, {icon: Icons.EXPRESS, refs: TechStackRefs.EXPRESS}],
@@ -134,6 +148,7 @@ export const skills = {
             dataScience: [{icon: Icons.PANDAS, refs: TechStackRefs.PANDAS}, {icon: Icons.NUMPY, refs: TechStackRefs.NUMPY}],
             mobile: [{icon: Icons.ANDROID, refs: TechStackRefs.ANDROID}],
             container: [{icon: Icons.DOCKER, refs: TechStackRefs.DOCKER}],
+            dependencyManagement: [{icon: Icons.NPM, refs: TechStackRefs.NPM},{icon: Icons.PYPI, refs: TechStackRefs.PYPI}, {icon: Icons.YARN, refs: TechStackRefs.YARN}, {icon: Icons.GRADLE, refs: TechStackRefs.GRADLE}],
             runtime: [{icon: Icons.NODE, refs: TechStackRefs.NODE}],
             webServer: [{icon: Icons.NGINX, refs: TechStackRefs.NGINX}],
             visualization: [{icon: Icons.MATPLOTLIB, refs: TechStackRefs.MATPLOTLIB}],
@@ -142,9 +157,9 @@ export const skills = {
     },
     personal: {
         title: 'Personal Experience',
-        text: "Below is a list of skills, frameworks and technologies that I've had a chance to work with and learn in my personal projects and time. Although I do not have professional hands-on experience with those, I feel adamant that I would be able to use them effectively in any work environment. Technologies showcased here do not include the professional ones, for obvious reasons. :D",
+        text: "Below is a list of skills, frameworks, and technologies that I've had the opportunity to work with and learn through my personal projects and free time. Although I do not have professional hands-on experience with these, I am confident that I could use them effectively in any work environment. The technologies showcased here do not include those I have used professionally, for obvious reasons. 😄",
         skills: {
-            programmingLanguages: [{icon: Icons.GO, refs: TechStackRefs.GO}, {icon: Icons.DART, refs: TechStackRefs.DART}],
+            programmingLanguages: [{icon: Icons.GO, refs: TechStackRefs.GO}, {icon: Icons.DART, refs: TechStackRefs.DART}, {icon: Icons.CSHARP, refs: TechStackRefs.CSHARP}],
             backend: [],
             frontend: [{icon: Icons.TAILWIND, refs: TechStackRefs.TAILWIND}, {icon: Icons.DJANGO, refs: TechStackRefs.DJANGO}, {icon: Icons.NEXTJS, refs: TechStackRefs.NEXTJS}],
             dataScience: [],
@@ -152,13 +167,12 @@ export const skills = {
             testFrameworks: [],
             mobile: [{icon: Icons.FLUTTER, refs: TechStackRefs.FLUTTER},],
             container: [{icon: Icons.KUBERNETES, refs: TechStackRefs.KUBERNETES}],
+            dependencyManagement: [{icon: Icons.POETRY, refs: TechStackRefs.POETRY}, {icon: Icons.MAVEN, refs: TechStackRefs.MAVEN}],
             runtime: [],
             webServer: [],
             visualization: [{icon: Icons.PROCESSING, refs: TechStackRefs.PROCESSING}, {icon: Icons.P5JS, refs: TechStackRefs.P5JS}],
             other: [],
         }
-        //[Icons.GO, Icons.DART, Icons.TAILWIND, Icons.FLUTTER, Icons.KUBERNETES, Icons.DJANGO, Icons.NEXTJS, Icons.PROCESSING, Icons.P5JS]
-
     }
 }
 

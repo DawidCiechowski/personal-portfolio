@@ -37,7 +37,7 @@ const MobileNav = () => {
               className={`tw-text-[1.8rem] tw-font-semibold tw-block tw-p-4 ${
                 pathName === link.path
                   ? "tw-text-main-color tw-border-b-[3px] tw-border-solid tw-border-main-color tw-duration-300 tw-ease-in-out tw"
-                  : "tw-text-text-color hover:tw-text-main-color hover:tw-border-main-color hover:tw-border-b-[3px] hover:tw-border-solid tw-duration-300 tw-ease-linear tw-border-b-[3px] tw-border-solid tw-border-transparent"
+                  : "tw-text-text-color hover:tw-text-black hover:tw-border-secondary hover:tw-border-b-[3px] hover:tw-border-solid hover:tw-bg-gradient-to-r hover:tw-from-main-color hover:tw-to-slate-900 hover:tw-duration-300 tw-duration-300 tw-ease-linear tw-border-b-[3px] tw-border-solid tw-border-transparent"
               }`}
               key={index}
               onClick={toggleMenu}
