@@ -8,7 +8,7 @@ interface SkillsTabProps {
     skills: unknown;
 }
 
-// TODO: Redefine all types to remove ts-ignore comments, once the website design is finalised. 
+// TODO: Redefine all types to remove ts-expect-error comments, once the website design is finalised. 
 // To those interested I use TodoTree extension in VS code, so I can always easily comeback to those todos, so they won't disappear.
 const SkillShowcase: React.FC<{item: {icon: Icons, refs: string}, index: number}> = ({item, index})=> {
   const icon = item.icon;
@@ -36,7 +36,7 @@ const SkillTab: React.FC<{skillType: string, items: Array<unknown>}> = ({skillTy
       <div className="tw-pt-3 tw-grid tw-grid-cols-3 tw-gap-16 md:tw-gap-0 md:tw-grid-cols-4 tw-items-center tw-justify-center tw-text-main-color tw-font-semibold tw-text-[5rem]">
         {items.map((item, index) => {
           return (
-            //@ts-ignore
+            //@ts-expect-error
             <SkillShowcase key={index} item={item} index={index} />
           )
         })}
@@ -49,67 +49,67 @@ const SkillsTab: React.FC<SkillsTabProps> = ({title, text, skills}) => {
   const skillTypes = [
     {
       name: "Programming Languages",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.programmingLanguages,
     },
     {
       name: "Backend",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.backend,
     },
     {
       name: "Frontend",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.frontend,
     },
     {
       name: "Databases",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.databases,
     },
     {
       name: "Test Frameworks",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.testFrameworks,
     },
     {
       name: "Data Science Frameworks",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.dataScience,
     },
     {
       name: "Mobile",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.mobile,
     },
     {
       name: "Containers",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.container,
     },
     {
       name: "Dependency Management Frameworks",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.dependencyManagement,
     },
     {
       name: "Runtime",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.runtime,
     },
     {
       name: "Web Servers",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.webServer,
     },
     {
       name: "Visualization Frameworks",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.visualization,
     },
     {
       name: "Other",
-      //@ts-ignore
+      //@ts-expect-error
       skills: skills.other,
     },
   ];
