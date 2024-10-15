@@ -1,6 +1,6 @@
 'use client';
 
-import Facts from "@/components/Facts";
+import Fact from "@/components/Facts";
 import SocialIcon from "@/components/SocialIcons";
 import Image from "next/image";
 import { Icons } from "@/utils/constants";
@@ -16,16 +16,16 @@ export default function Home() {
     link.click();
   }
   return (
-    <div className="lg:tw-flex-row tw-items-center tw-flex tw-flex-col-reverse tw-justify-center lg:tw-gap-[15rem] tw-py-[8rem] lg:tw-py-[12rem] tw-px-[8%]">
+    <div className="md:tw-flex-row tw-w-screen tw-items-center tw-flex tw-flex-col-reverse tw-justify-center md:tw-gap-[15rem] tw-py-[8rem] lg:tw-py-[12rem] tw-px-[8%]">
       <div className="tw-flex tw-flex-col tw-items-center lg:tw-items-baseline lg:tw-text-left tw-justify-center tw-mt-12">
         <h1 className="tw-text-[7rem] tw-py-4 tw-font-bold tw-mt-6 tw-leading-none">
           Hey I&apos;m \<br />
           <span className="tw-text-main-color">Dawid Ciechowski;</span>
         </h1>
-        <h3 className="tw-text-[2.5rem] md:tw-text-[4rem] tw-font-semibold tw-min-w-[280px]">
+        <h3 className="tw-text-[2.5rem] md:tw-text-[2.5rem] lg:tw-text-[3rem] tw-font-semibold tw-min-w-[280px] tw-mt-[4rem]">
           I&apos;m a <span className="tw-relative text-animation-span"></span>
         </h3>
-        <p className="tw-text-[1.5rem] tw-font-medium tw-leading[1.8] tw-max-w-[1000px] tw-pt-32 lg:tw-pt-4">
+        <p className="tw-text-[1.5rem] tw-font-medium tw-leading[1.8] tw-max-w-[1000px] tw-pt-16 sm:tw-pt-16 lg:tw-pt-4">
           I have 5 years of commercial experience spanning from{" "}
           <span className="tw-relative tw-text-main-color tw-font-semibold">
             backend to some frontend, through full-stack development and
@@ -78,32 +78,32 @@ export default function Home() {
         </div>
 
         <div className="tw-flex tw-items-center tw-gap-[5rem] tw-pt-[6rem]">
-          <Facts value={5}>
+          <Fact value={5}>
             <p>
               Years of <br />
               Experience
             </p>
-          </Facts>
-          <Facts value={200}>
+          </Fact>
+          <Fact value={40}>
             <p>
-              Technologies <br /> Mastered
+              Technologies <br /> Learned
             </p>
-          </Facts>
-          <Facts value={30}>
+          </Fact>
+          <Fact value={50}>
             <p>
               Projects
               <br />
-              Started
+              Started 😅
             </p>
-          </Facts>
+          </Fact>
         </div>
       </div>
       <div className="tw-rounded-full">
         <Image
-          className="tw-relative tw-mb-[2rem] lg:tw-mb-0 tw-top-12 tw-border-background tw-w-[32vw] tw-rounded-full tw-shadow-glow-sm tw-cursor-pointer tw-duration-[0.4s] tw-ease-in-out hover:tw-shadow-glow-xl"
-          src="/dwarf.jpg"
-          width={614}
-          height={614}
+          className="tw-relative tw-mb-[2rem] tw-top-12 tw-hidden md:tw-block md:tw-w-full md:tw-h-full tw-border-background tw-rounded-full tw-shadow-glow-sm tw-cursor-pointer tw-duration-[0.4s] tw-ease-in-out hover:tw-shadow-glow-xl"
+          src="/self-portrait.png"
+          width={500}
+          height={500}
           alt="dwarf"
         />
       </div>
