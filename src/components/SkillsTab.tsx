@@ -20,7 +20,7 @@ const SkillShowcase: React.FC<{item: {icon: Icons, refs: string}, index: number}
       className="tw-flex tw-flex-col tw-cursor-pointer tw-justify-center tw-items-center tw-w-[5rem] tw-h-[5rem] tw-bg-transparent tw-border-2 tw-border-solid tw-border-main-color tw-text-[2.5rem] tw-rounded-full tw-text-main-color tw-mt-[1rem] tw-ml-0 tw-duration-300 tw-ease-in-out hover:tw-text-text-color hover:tw-scale-[1.3] hover:tw-translate-y-[-5px] hover:tw-shadow-glow-sm hover:tw-bg-main-color"
     >
       <i className={`${icon}`}></i>
-      <div className="tw-text-[6px]">
+      <div className="tw-text-[5px] md:tw-text-[6px]">
         {icon.includes("bxl")
           ? icon.split("bxl-")[1].toUpperCase()
           : icon.split("-")[1].toUpperCase()}

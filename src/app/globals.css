@@ -182,11 +182,11 @@ html {
     }
 
     .active-skill-button {
-        @apply tw-mt-[3rem] tw-border-2 tw-shadow-glow-sm tw-border-main-color tw-bg-main-color tw-font-bold tw-text-black tw-rounded-lg tw-w-[50%] tw-h-[5rem] tw-text-[1.1rem] tw-flex tw-items-center tw-justify-center tw-duration-300 hover:tw-scale-110 hover:tw-shadow-glow-md hover:tw-text-[3rem]
+        @apply tw-mt-[3rem] tw-border-2 tw-shadow-glow-sm tw-border-main-color tw-bg-main-color tw-font-bold tw-text-black tw-rounded-lg tw-w-[50%] tw-h-[5rem] tw-text-[2.4rem] tw-flex tw-items-center tw-justify-center tw-duration-300 hover:tw-scale-110 hover:tw-shadow-glow-md hover:tw-text-[2.8rem]
     }
 
     .inactive-skill-button {
-        @apply tw-mt-[3rem] tw-border-2 tw-shadow-glow-sm tw-border-main-color tw-bg-text-color tw-font-bold tw-text-main-color tw-rounded-lg tw-w-[50%] tw-h-[5rem] tw-text-[2.7rem] tw-flex tw-items-center tw-justify-center tw-duration-300 hover:tw-scale-110 hover:tw-shadow-glow-md hover:tw-text-[3.2rem] hover:tw-text-black hover:tw-bg-main-color
+        @apply tw-mt-[3rem] tw-border-2 tw-shadow-glow-sm tw-border-main-color tw-bg-text-color tw-font-bold tw-text-main-color tw-rounded-lg tw-w-[50%] tw-h-[5rem] tw-text-[2.4rem] tw-flex tw-items-center tw-justify-center tw-duration-300 hover:tw-scale-110 hover:tw-shadow-glow-md hover:tw-text-[2.8rem] hover:tw-text-black hover:tw-bg-main-color
     }
 }
 
