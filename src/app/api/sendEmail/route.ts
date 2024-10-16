@@ -57,6 +57,10 @@ export async function POST(req: NextRequest) {
         <div style="border-left: 4px solid #FF6500; padding-left: 15px; margin-top: 15px;">
           <p style="font-size: 16px; font-weight: 500; color: #FF6500;">${message}</p>
         </div>
+        <div style="font-size: 16px; font-weight: 500; color: #FF6500; display: flex; flex-direction: column;">
+          <p>And here's a picture of cute, sleeping panda to make the wait better.</p>
+          <img src="https://cdn.britannica.com/80/150980-050-84B9202C/Giant-panda-cub-branch.jpg" width="130px" height="130px" alt="sleeping-panda"></img>
+        </div>
         <p style="font-size: 16px; color: #FF6500; margin-top: 20px;">Best regards,</p>
         <p style="font-size: 22px; font-weight: 700; color: #FF6500;"><strong>Dawid Ciechowski</strong></p>
         <p style="font-size: 20px; font-weight: 600; color: #FF6500;">Senior Software Engineer</p>
