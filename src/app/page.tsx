@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Fact from "@/components/Facts";
 import SocialIcon from "@/components/SocialIcons";
@@ -7,14 +7,13 @@ import { Icons } from "@/utils/constants";
 import Link from "next/link";
 
 export default function Home() {
-
   const downloadCv = () => {
     const url = "/dawid-ciechowski-cv-2024.pdf";
-    const link = document.createElement('a');
+    const link = document.createElement("a");
     link.href = url;
     link.download = "dawid-ciechowski-cv-2024.pdf";
     link.click();
-  }
+  };
   return (
     <div className="md:tw-flex-row tw-w-screen tw-items-center tw-flex tw-flex-col-reverse tw-justify-center md:tw-gap-[15rem] tw-py-[8rem] lg:tw-py-[12rem] tw-px-[8%]">
       <div className="tw-flex tw-flex-col tw-items-center lg:tw-items-baseline lg:tw-text-left tw-justify-center tw-mt-12">
@@ -101,7 +100,7 @@ export default function Home() {
       <div className="tw-rounded-full">
         <Image
           className="tw-relative tw-mb-[2rem] tw-top-12 tw-hidden md:tw-block md:tw-w-full md:tw-h-full tw-border-background tw-rounded-full tw-shadow-glow-sm tw-cursor-pointer tw-duration-[0.4s] tw-ease-in-out hover:tw-shadow-glow-xl"
-          src="/self-portrait.png"
+          src="/self-portrait.jpg"
           width={500}
           height={500}
           alt="dwarf"
