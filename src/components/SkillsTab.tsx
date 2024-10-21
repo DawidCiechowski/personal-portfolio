@@ -1,16 +1,19 @@
-import { Icons  } from "@/utils/constants";
+import { Icons } from "@/utils/constants";
 import Link from "next/link";
 import React from "react";
 
 interface SkillsTabProps {
-    title: string;
-    text: string;
-    skills: unknown;
+  title: string;
+  text: string;
+  skills: unknown;
 }
 
-// TODO: Redefine all types to remove ts-expect-error comments, once the website design is finalised. 
+// TODO: Redefine all types to remove ts-expect-error comments, once the website design is finalised.
 // To those interested I use TodoTree extension in VS code, so I can always easily comeback to those todos, so they won't disappear.
-const SkillShowcase: React.FC<{item: {icon: Icons, refs: string}, index: number}> = ({item, index})=> {
+const SkillShowcase: React.FC<{
+  item: { icon: Icons; refs: string };
+  index: number;
+}> = ({ item, index }) => {
   const icon = item.icon;
   const ref = item.refs;
   return (
@@ -26,26 +29,31 @@ const SkillShowcase: React.FC<{item: {icon: Icons, refs: string}, index: number}
           : icon.split("-")[1].toUpperCase()}
       </div>
     </Link>
-  )
-}
+  );
+};
 
-const SkillTab: React.FC<{skillType: string, items: Array<unknown>}> = ({skillType, items}) => {
+const SkillTab: React.FC<{ skillType: string; items: Array<unknown> }> = ({
+  skillType,
+  items,
+}) => {
   return (
     <div className="">
-      <h1 className="tw-font-bold tw-text-[1.5rem] lg:tw-text-[2rem] tw-pt-4 lg:tw-pt-8">{skillType}</h1>
+      <h1 className="tw-font-bold tw-text-[1.5rem] lg:tw-text-[2rem] tw-pt-4 lg:tw-pt-8">
+        {skillType}
+      </h1>
       <div className="tw-pt-3 tw-grid tw-grid-cols-3 tw-gap-16 md:tw-gap-0 md:tw-grid-cols-4 tw-items-center tw-justify-center tw-text-main-color tw-font-semibold tw-text-[5rem]">
         {items.map((item, index) => {
           return (
             //@ts-expect-error Gotta add proper types
             <SkillShowcase key={index} item={item} index={index} />
-          )
+          );
         })}
       </div>
     </div>
   );
-}
+};
 
-const SkillsTab: React.FC<SkillsTabProps> = ({title, text, skills}) => {
+const SkillsTab: React.FC<SkillsTabProps> = ({ title, text, skills }) => {
   const skillTypes = [
     {
       name: "Programming Languages",
@@ -108,6 +116,11 @@ const SkillsTab: React.FC<SkillsTabProps> = ({title, text, skills}) => {
       skills: skills.visualization,
     },
     {
+      name: "Operating Systems",
+      //@ts-expect-error Gotta add proper types
+      skills: skills.operatingSystems,
+    },
+    {
       name: "Other",
       //@ts-expect-error Gotta add proper types
       skills: skills.other,
@@ -130,6 +143,6 @@ const SkillsTab: React.FC<SkillsTabProps> = ({title, text, skills}) => {
         })}
     </div>
   );
-}
+};
 
 export default SkillsTab;

@@ -90,6 +90,11 @@ export enum Icons {
     GRADLE = 'devicon-gradle-plain',
     MAVEN = 'devicon-maven-plain',
     PYPI = 'devicon-pypi-plain',
+    WINDOWS = 'devicon-windows11-plain',
+    LINUX = 'devicon-linux-plain',
+    DEBIAN = 'devicon-debian-plain',
+    ARCH = 'devicon-archlinux-plain',
+    MACOS = 'devicon-apple-plain',
 }
 
 export class TechStackRefs {
@@ -133,6 +138,11 @@ export class TechStackRefs {
     static readonly GRADLE = 'https://gradle.org';
     static readonly MAVEN = 'https://maven.apache.org';
     static readonly PYPI = 'https://pypi.org';
+    static readonly WINDOWS = 'https://www.microsoft.com/en-us/windows?r=1';
+    static readonly LINUX = 'https://www.linux.org';
+    static readonly DEBIAN = 'https://www.debian.org';
+    static readonly ARCH = 'https://archlinux.org';
+    static readonly MACOS = 'https://www.apple.com/macos/';
 }
 
 export const skills = {
@@ -152,6 +162,7 @@ export const skills = {
             runtime: [{icon: Icons.NODE, refs: TechStackRefs.NODE}],
             webServer: [{icon: Icons.NGINX, refs: TechStackRefs.NGINX}],
             visualization: [{icon: Icons.MATPLOTLIB, refs: TechStackRefs.MATPLOTLIB}],
+            operatingSystems: [{icon: Icons.WINDOWS, refs: TechStackRefs.WINDOWS},{icon: Icons.LINUX, refs: TechStackRefs.LINUX}, {icon: Icons.ARCH, refs: TechStackRefs.ARCH},{icon: Icons.DEBIAN, refs: TechStackRefs.DEBIAN},{icon: Icons.MACOS, refs: TechStackRefs.MACOS},],
             other: [{icon: Icons.GITHUB, refs: TechStackRefs.GITHUB}, {icon: Icons.BASH, refs: TechStackRefs.BASH}],
         }
     },
@@ -171,6 +182,7 @@ export const skills = {
             runtime: [],
             webServer: [],
             visualization: [{icon: Icons.PROCESSING, refs: TechStackRefs.PROCESSING}, {icon: Icons.P5JS, refs: TechStackRefs.P5JS}],
+            operatingSystems: [],
             other: [],
         }
     }
