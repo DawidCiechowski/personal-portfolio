@@ -33,5 +33,5 @@ export async function getDB(): Promise<{ client: MongoClient; db: Db }> {
     cached.client = client;
     cached.db = db;
 
-    return {client, db}
+    return {client, db};
 }
