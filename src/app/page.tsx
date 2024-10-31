@@ -99,7 +99,7 @@ export default function Home() {
       </div>
       <div className="tw-rounded-full">
         <Image
-          className="tw-relative tw-mb-[2rem] tw-top-12 tw-hidden md:tw-block md:tw-w-full md:tw-h-full tw-border-background tw-rounded-full tw-shadow-glow-sm tw-cursor-pointer tw-duration-[0.4s] tw-ease-in-out hover:tw-shadow-glow-xl"
+          className="tw-rounded-[50%] tw-relative tw-mb-[2rem] tw-min-w-[220px] tw-h-80 tw-w-80 md:tw-block md:tw-h-fit md:tw-w-fit tw-border-background tw-shadow-glow-sm tw-cursor-pointer tw-duration-[0.4s] tw-ease-in-out hover:tw-shadow-glow-xl"
           src="/self-portrait.jpg"
           width={500}
           height={500}

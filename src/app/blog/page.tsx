@@ -20,11 +20,11 @@ export default async function ArticlePage({ searchParams }: BlogPageProps) {
       <h1 className="tw-text-[2.2rem] tw-w-1/2 md:tw-text-[2.5rem] md:tw-w-1/3 lg:tw-w-1/2 lg:tw-text-[3.6rem] tw-font-bold tw-text-main-color tw-border-b-2 tw-rounded-full tw-outline-4 tw-text-center tw-mb-16 tw-mt-8">
         Beyond The Pages
       </h1>
-      <ul className="tw-flex tw-flex-col md:tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-4 md:tw-gap-x-4 tw-gap-y-6 ">
+      <ul className="tw-flex tw-flex-col md:tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-4 md:tw-gap-x-8 tw-gap-y-6 ">
         {articles.map((article) => (
           <Link
             key={article._id}
-            className="tw-border-solid tw-border-main-color tw-border-2 tw-shadow-glow-tiny tw-rounded-xl tw-text-wrap tw-items-end tw-flex tw-flex-col tw-justify-center"
+            className="tw-min-h-72 tw-border-solid tw-border-main-color tw-border-2 tw-shadow-glow-tiny tw-rounded-xl tw-text-wrap tw-items-end tw-flex tw-flex-col tw-justify-end tw-duration-200 tw-ease-in-out hover:tw-scale-110 hover:tw-shadow-glow-md"
             href={`/blog/${article._id}`}
           >
             <p className="tw-pb-2 tw-pt-4 tw-pr-2 tw-pl-2">{article.title}</p>
