@@ -1,6 +1,6 @@
-import Nav from "./Nav";
-import Logo from "./Logo";
-import MobileNav from "./MobileNav";
+import Nav from './Nav';
+import Logo from './Logo';
+import MobileNav from './MobileNav';
 
 export default function Header() {
   return (

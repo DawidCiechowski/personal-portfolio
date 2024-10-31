@@ -1,13 +1,13 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 const stairAnimation = {
   initial: {
-    bottom: "0%",
+    bottom: '0%',
   },
   animate: {
-    bottom: "100%",
+    bottom: '100%',
   },
   exit: {
-    bottom: ["100%", "0%"],
+    bottom: ['100%', '0%'],
   },
 };
 
@@ -29,7 +29,7 @@ const TransitionElement = () => {
             exit="exit"
             transition={{
               duration: 0.2,
-              ease: "easeInOut",
+              ease: 'easeInOut',
               delay: reverseIndex(index) * 0.1,
             }}
             className="tw-h-full tw-w-full tw-bg-gradient-to-b tw-from-slate-900 tw-to-slate-800 tw-relative"

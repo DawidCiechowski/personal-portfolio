@@ -2,8 +2,8 @@ name: Code Formatting
 
 on: [push, pull_request]
 
-jobs: 
-  formatting: 
+jobs:
+  formatting:
     runs-on: ubuntu-latest
 
     steps:
@@ -11,7 +11,7 @@ jobs:
 
       - name: Setup node
         uses: actions/setup-node@v3
-        with: 
+        with:
           node-version: '20'
 
       - name: Install dependencies
@@ -26,7 +26,7 @@ jobs:
         run: npx prettier --check
         continue-on-error: true
         id: prettier
-        
+
       - name: Annotate ESLint Issues
         if: steps.es-lint.outcome == 'failure'
         uses: github/codeql-action/upload-sarif@v2

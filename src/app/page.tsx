@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import Fact from "@/components/Facts";
-import SocialIcon from "@/components/SocialIcons";
-import Image from "next/image";
-import { Icons } from "@/utils/constants";
-import Link from "next/link";
+import Fact from '@/components/Facts';
+import SocialIcon from '@/components/SocialIcons';
+import Image from 'next/image';
+import { Icons } from '@/utils/constants';
+import Link from 'next/link';
 
 export default function Home() {
   const downloadCv = () => {
-    const url = "/dawid-ciechowski-cv-2024.pdf";
-    const link = document.createElement("a");
+    const url = '/dawid-ciechowski-cv-2024.pdf';
+    const link = document.createElement('a');
     link.href = url;
-    link.download = "dawid-ciechowski-cv-2024.pdf";
+    link.download = 'dawid-ciechowski-cv-2024.pdf';
     link.click();
   };
   return (
@@ -25,17 +25,17 @@ export default function Home() {
           I&apos;m a <span className="tw-relative text-animation-span"></span>
         </h3>
         <p className="tw-text-[1.5rem] tw-font-medium tw-leading[1.8] tw-max-w-[1000px] tw-pt-16 sm:tw-pt-16 lg:tw-pt-4">
-          I have 5 years of commercial experience spanning from{" "}
+          I have 5 years of commercial experience spanning from{' '}
           <span className="tw-relative tw-text-main-color tw-font-semibold">
             backend to some frontend, through full-stack development and
             automation testing
           </span>
           . I thrive on turning ideas into reality through code, learning new
           frameworks and expanding my current knowledge. Beyond programming,
-          I&apos;m a huge{" "}
+          I&apos;m a huge{' '}
           <span className="tw-relative tw-text-main-color tw-font-semibold">
             gaming enthusiast
-          </span>{" "}
+          </span>{' '}
           — whether it&apos;s diving into tabletop RPGs like DnD, immersing
           myself in epic MMORPGs, or even crafting my own games. I&apos;m
           excited to bring my technical skills and love for learning new
@@ -43,11 +43,11 @@ export default function Home() {
         </p>
         <div className="">
           <SocialIcon
-            href={"https://www.linkedin.com/in/dawid-ciechowski/"}
+            href={'https://www.linkedin.com/in/dawid-ciechowski/'}
             icon={Icons.LINKEDIN}
           ></SocialIcon>
           <SocialIcon
-            href={"https://github.com/DawidCiechowski/"}
+            href={'https://github.com/DawidCiechowski/'}
             icon={Icons.GITHUB}
           ></SocialIcon>
         </div>
@@ -57,10 +57,10 @@ export default function Home() {
             onClick={downloadCv}
             className={`tw-py-4 tw-px-8 tw-shadow-glow-sm  tw-text-[1.6rem] tw-flex tw-items-center tw-justify-center tw-rounded-[4rem] tw-font-semibold tw-cursor-pointer tw-duration-300 tw-ease-in-out hover:tw-scale-105 hover:tw-shadow-glow-md ${
               //  "tw-bg-black tw-text-main-color tw-border-2 tw-border-solid tw-border-main-color tw-shadow-transparent hover:tw-shadow-glow-sm hover:tw-text-black hover:tw-bg-main-color"
-              "tw-bg-main-color tw-border-transparent tw-border-2 tw-border-solid tw-text-black"
+              'tw-bg-main-color tw-border-transparent tw-border-2 tw-border-solid tw-text-black'
             }`}
           >
-            {"Download CV"}
+            {'Download CV'}
             {
               <i
                 className={`tw-text-[2rem] tw-pl-4 tw-mt-[3px] ${Icons.DOWNLOAD}`}
@@ -69,10 +69,10 @@ export default function Home() {
             }
           </button>
           <Link
-            href={"/contact"}
-            className={`tw-py-4 tw-px-8 tw-shadow-glow-sm  tw-text-[1.6rem] tw-flex tw-items-center tw-justify-center tw-rounded-[4rem] tw-font-semibold tw-cursor-pointer tw-duration-300 tw-ease-in-out hover:tw-scale-105 hover:tw-shadow-glow-md ${"tw-bg-black tw-text-main-color tw-border-2 tw-border-solid tw-border-main-color tw-shadow-transparent hover:tw-shadow-glow-sm hover:tw-text-black hover:tw-bg-main-color"}`}
+            href={'/contact'}
+            className={`tw-py-4 tw-px-8 tw-shadow-glow-sm  tw-text-[1.6rem] tw-flex tw-items-center tw-justify-center tw-rounded-[4rem] tw-font-semibold tw-cursor-pointer tw-duration-300 tw-ease-in-out hover:tw-scale-105 hover:tw-shadow-glow-md ${'tw-bg-black tw-text-main-color tw-border-2 tw-border-solid tw-border-main-color tw-shadow-transparent hover:tw-shadow-glow-sm hover:tw-text-black hover:tw-bg-main-color'}`}
           >
-            {"Contact"}
+            {'Contact'}
           </Link>
         </div>
 

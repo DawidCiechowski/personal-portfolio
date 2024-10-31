@@ -1,30 +1,30 @@
-import type { Metadata } from "next";
-import { Oswald, Pixelify_Sans } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Oswald, Pixelify_Sans } from 'next/font/google';
+import './globals.css';
 
 //components
-import Header from "@/components/Header";
-import PageTransition from "@/components/PageTransition";
-import TransitionEffect from "@/components/TransitionEffect";
+import Header from '@/components/Header';
+import PageTransition from '@/components/PageTransition';
+import TransitionEffect from '@/components/TransitionEffect';
 
 const oswaldSans = Oswald({
-  weight: ["200", "300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-oswald",
-  display: "swap",
+  weight: ['200', '300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-oswald',
+  display: 'swap',
 });
 
 const pixelifySans = Pixelify_Sans({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-pixelify-sans",
-  display: "swap",
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-pixelify-sans',
+  display: 'swap',
 });
 export const metadata: Metadata = {
-  title: "Dawid Ciechowski - Portfolio",
-  description: "Portfolio",
+  title: 'Dawid Ciechowski - Portfolio',
+  description: 'Portfolio',
   icons: {
-    icon: "/icon.png",
+    icon: '/icon.png',
   },
 };
 

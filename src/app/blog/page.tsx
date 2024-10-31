@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
-import { getArticles } from "./getArticles";
+import React from 'react';
+import Link from 'next/link';
+import { getArticles } from './getArticles';
 
 interface BlogPageProps {
   searchParams: {
@@ -11,7 +11,7 @@ interface BlogPageProps {
 const PAGE_SIZE = 12;
 
 export default async function ArticlePage({ searchParams }: BlogPageProps) {
-  const page = parseInt(searchParams.page || "1", 10);
+  const page = parseInt(searchParams.page || '1', 10);
 
   const { articles, totalPages } = await getArticles(page, PAGE_SIZE);
 
@@ -21,7 +21,7 @@ export default async function ArticlePage({ searchParams }: BlogPageProps) {
         Beyond The Pages
       </h1>
       <ul className="tw-flex tw-flex-col md:tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-4 md:tw-gap-x-8 tw-gap-y-6 ">
-        {articles.map((article) => (
+        {articles.map(article => (
           <Link
             key={article._id}
             className="tw-min-h-72 tw-border-solid tw-border-main-color tw-border-2 tw-shadow-glow-tiny tw-rounded-xl tw-text-wrap tw-items-end tw-flex tw-flex-col tw-justify-end tw-duration-200 tw-ease-in-out hover:tw-scale-110 hover:tw-shadow-glow-md"
@@ -57,9 +57,9 @@ function Pagination({
         </Link>
       )}
       <span className="tw-text-white tw-text-[1.2rem]">
-        {" "}
-        Page <span className="tw-text-main-color">{currentPage}</span> of{" "}
-        <span className="tw-text-text-color">{totalPages}</span>{" "}
+        {' '}
+        Page <span className="tw-text-main-color">{currentPage}</span> of{' '}
+        <span className="tw-text-text-color">{totalPages}</span>{' '}
       </span>
       {currentPage < totalPages && (
         <Link

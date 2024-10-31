@@ -1,6 +1,6 @@
-import Link from "next/link";
-import React from "react";
-import { Icons } from "@/utils/constants";
+import Link from 'next/link';
+import React from 'react';
+import { Icons } from '@/utils/constants';
 
 interface SocialIconProps {
   icon: Icons;
