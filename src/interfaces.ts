@@ -3,6 +3,7 @@ import { ObjectId } from 'mongodb';
 export interface DbArticle {
   _id: ObjectId;
   title: string;
+  header_image: string;
   author: string;
   date: Date;
   tags: string[];
@@ -12,6 +13,7 @@ export interface DbArticle {
 export interface ClientArticle {
   _id: string;
   title: string;
+  header_image: string;
   author: string;
   date: string;
   tags: string[];
@@ -21,6 +23,7 @@ export interface ClientArticle {
 export interface Article {
   _id: string;
   title: string;
+  header_image: string;
   author: string;
   date: string;
   tags: string[];

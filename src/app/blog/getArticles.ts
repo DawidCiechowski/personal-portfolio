@@ -22,6 +22,7 @@ export const getArticles = cache(async (page: number, pageSize: number) => {
   const articles: Article[] = articlesFromDB.map(article => ({
     _id: article._id.toHexString(),
     title: article.title,
+    header_image: article.header_image,
     author: article.author,
     date: article.date.toISOString(),
     tags: article.tags,

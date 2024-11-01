@@ -47,21 +47,23 @@ const ArticlePage: NextPage<ArticlePageProps> = async ({
   }
 
   return (
-    <div className="tw-flex tw-flex-col tw-gap-y-10 tw-items-center tw-justify-center">
-      <h1>{article.title}</h1>
-      <p>
-        {article.author} - {new Date(article.date).toLocaleDateString()}
-      </p>
-      <ReactMarkdown
-        components={{
-          img: ({ _node, ...props }) => <MarkdownImage {...props} />,
-        }}
-      >
-        {article.content}
-      </ReactMarkdown>
-      {article.tags.map((tag, index) => (
-        <p key={index}>{tag}</p>
-      ))}
+    <div className="tw-flex tw-flex-col tw-gap-y-10 tw-items-center tw-justify-center tw-px-[10%]">
+      <div className="tw-z-10 tw-items-center tw-justify-center tw-flex tw-flex-col tw-gap-y-10">
+        <h1>{article.title}</h1>
+        <p>
+          {article.author} - {new Date(article.date).toLocaleDateString()}
+        </p>
+        <ReactMarkdown
+          components={{
+            img: ({ _node, ...props }) => <MarkdownImage {...props} />,
+          }}
+        >
+          {article.content}
+        </ReactMarkdown>
+        {article.tags.map((tag, index) => (
+          <p key={index}>{tag}</p>
+        ))}
+      </div>
     </div>
   );
 };
@@ -81,6 +83,7 @@ async function getArticleByID(id: string) {
   const article: ClientArticle = {
     _id: articleFromDb._id.toHexString(),
     title: articleFromDb.title,
+    header_image: articleFromDb.header_image,
     author: articleFromDb.author,
     date: articleFromDb.date.toISOString(),
     tags: articleFromDb.tags,

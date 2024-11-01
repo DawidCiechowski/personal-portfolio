@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { getArticles } from './getArticles';
+import Image from 'next/image';
 
 interface BlogPageProps {
   searchParams: {
@@ -24,13 +25,21 @@ export default async function ArticlePage({ searchParams }: BlogPageProps) {
         {articles.map(article => (
           <Link
             key={article._id}
-            className="tw-min-h-72 tw-border-solid tw-border-main-color tw-border-2 tw-shadow-glow-tiny tw-rounded-xl tw-text-wrap tw-items-end tw-flex tw-flex-col tw-justify-end tw-duration-200 tw-ease-in-out hover:tw-scale-110 hover:tw-shadow-glow-md"
+            className="tw-relative tw-z-10 tw-min-h-72 tw-min-w-96 tw-border-solid tw-border-main-color tw-border-2 tw-shadow-glow-tiny tw-rounded-xl tw-text-wrap tw-items-end tw-flex tw-flex-col tw-justify-end tw-duration-200 tw-ease-in-out hover:tw-scale-110 hover:tw-shadow-glow-md"
             href={`/blog/${article._id}`}
           >
-            <p className="tw-pb-2 tw-pt-4 tw-pr-2 tw-pl-2">{article.title}</p>
-            <p className="tw-pb-2 tw-pr-2">
-              {article.author} - {new Date(article.date).toLocaleDateString()}
-            </p>
+            <Image
+              src={article.header_image}
+              alt="Background Image"
+              layout="fill"
+              className="-tw-z-10"
+            />
+            <div className="tw-relative tw-z-10 tw-bg-slate-800 tw-text-white tw-w-full">
+              <p className="tw-pb-2 tw-pt-4 tw-pr-2 tw-pl-2">{article.title}</p>
+              <p className="tw-pb-2 tw-pr-2">
+                {article.author} - {new Date(article.date).toLocaleDateString()}
+              </p>
+            </div>
           </Link>
         ))}
       </ul>
