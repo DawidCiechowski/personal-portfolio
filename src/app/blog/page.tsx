@@ -21,7 +21,7 @@ export default async function ArticlePage({ searchParams }: BlogPageProps) {
       <h1 className="tw-text-[2.2rem] tw-w-1/2 md:tw-text-[2.5rem] md:tw-w-1/3 lg:tw-w-1/2 lg:tw-text-[3.6rem] tw-font-bold tw-text-main-color tw-border-b-2 tw-rounded-full tw-outline-4 tw-text-center tw-mb-16 tw-mt-8">
         Beyond The Pages
       </h1>
-      <ul className="tw-flex tw-flex-col md:tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-4 md:tw-gap-x-8 tw-gap-y-6 ">
+      <ul className="tw-flex tw-flex-col md:tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 xl:tw-grid-cols-4 md:tw-gap-x-8 tw-gap-y-6 ">
         {articles.map(article => (
           <Link
             key={article._id}
