@@ -20,8 +20,6 @@ export async function getDB(): Promise<{ client: MongoClient; db: Db }> {
     ? (process.env.MONGO_DB_URI_DEV as string)
     : (process.env.MONGO_DB_URI_PRODUCTION as string);
 
-  const dbName = isDebug ? 'TestArticles' : 'Articles';
-
   if (!uri) {
     throw new Error(
       'Database URI is not defined. Please define it in .env file.',
@@ -33,7 +31,7 @@ export async function getDB(): Promise<{ client: MongoClient; db: Db }> {
   const client = new MongoClient(uri, options);
 
   await client.connect();
-  const db = client.db(dbName);
+  const db = client.db();
 
   cached.client = client;
   cached.db = db;

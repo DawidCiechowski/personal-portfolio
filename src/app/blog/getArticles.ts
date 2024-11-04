@@ -9,7 +9,6 @@ export const getArticles = cache(async (page: number, pageSize: number) => {
   const articlesCollection = db.collection<DbArticle>('articles');
 
   const totalArticles = await articlesCollection.countDocuments();
-  console.log(document);
 
   const totalPages = Math.ceil(totalArticles / pageSize);
 

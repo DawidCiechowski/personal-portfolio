@@ -1,5 +1,3 @@
-// components/ArticleHeader/ArticleHeader.tsx
-
 'use client';
 
 import { useEffect, useState } from 'react';
