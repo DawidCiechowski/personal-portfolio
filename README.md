@@ -9,4 +9,3 @@ It will also act as my blog/article site. I'm currently working on few firsts: P
 > **NOTE** This part of README will be updated with links, once the articles are out!
 
 ## [Website](dawid-ciechowski-portfolio.vercel.app)
-

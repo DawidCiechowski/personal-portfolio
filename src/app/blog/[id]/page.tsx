@@ -49,7 +49,6 @@ const ArticlePage: NextPage<ArticlePageProps> = async ({
 
   return (
     <div className="tw-min-h-full tw-min-w-full tw-flex tw-flex-col tw-gap-y-10 tw-items-center tw-justify-center tw-px-[10%]">
-
       <ArticleHeader
         imageSrc={article.header_image}
         title={article.title}
