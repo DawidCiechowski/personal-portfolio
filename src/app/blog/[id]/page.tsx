@@ -6,6 +6,7 @@ import React from 'react';
 import { ClientArticle, DbArticle } from '@/interfaces';
 import { notFound } from 'next/navigation';
 import { getDB } from '@/utils/db';
+import ArticleHeader from '@/components/ArticleHeader';
 
 interface ArticlePageProps {
   params: {
@@ -47,17 +48,14 @@ const ArticlePage: NextPage<ArticlePageProps> = async ({
   }
 
   return (
-    <div className="tw-min-h-full tw-min-w-full tw-flex tw-flex-col tw-gap-y-10 tw-items-center tw-justify-center tw-px-[10%] tw-mt-[10%]">
-      <div className=" tw-w-full tw-h-full tw-items-center tw-flex tw-flex-col">
-        <h1 className="tw-text-[6vh] md:tw-text-[4vh] tw-font-bold tw-border-b-[2px] tw-rounded-lg tw-border-main-color tw-mb-4 tw-text-slate-300">
-          {article.title}
-        </h1>
-        <h2 className="tw-text-[4vh] md:tw-text-[2vh] tw-text-slate-400">
-          {article.author} - {new Date(article.date).toLocaleDateString()}
-        </h2>
-      </div>
-
-      <div className="tw-relative tw-z-10 tw-px-[12%] tw-items-center tw-flex tw-flex-col tw-gap-y-10 tw-text-slate-400 tw-text-[12px] md:tw-text-[16px] lg:tw-text-[20px]">
+    <div className="tw-min-h-full tw-min-w-full tw-flex tw-flex-col tw-gap-y-10 tw-items-center tw-justify-center tw-px-[10%]">
+      <ArticleHeader
+        imageSrc={article.header_image}
+        title={article.title}
+        author={article.author}
+        date={new Date(article.date).toLocaleDateString()}
+      />
+      <div className="post-class">
         <ReactMarkdown
           components={{
             img: ({ node: _node, ...props }) => <MarkdownImage {...props} />,

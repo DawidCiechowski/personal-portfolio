@@ -45,10 +45,10 @@ export default async function ArticlePage({ searchParams }: BlogPageProps) {
                   className="tw-z-12"
                 />
                 <div className="tw-relative tw-z-10 tw-bg-slate-800 tw-text-white tw-w-full">
-                  <p className="tw-pb-2 tw-pt-4 tw-pr-2 tw-pl-2">
+                  <p className="tw-pb-2 tw-pt-4 tw-pr-2 tw-pl-2 tw-text-[20px]">
                     {article.title}
                   </p>
-                  <p className="tw-pb-2 tw-pl-2">
+                  <p className="tw-pb-2 tw-pl-2 tw-text-[10px]">
                     {article.author} -{' '}
                     {new Date(article.date).toLocaleDateString()}
                   </p>
