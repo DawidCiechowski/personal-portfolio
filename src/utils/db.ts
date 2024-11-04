@@ -36,5 +36,7 @@ export async function getDB(): Promise<{ client: MongoClient; db: Db }> {
   cached.client = client;
   cached.db = db;
 
+  console.log(db ? 'DB EXISTS' : 'Problem with db');
+
   return { client, db };
 }
