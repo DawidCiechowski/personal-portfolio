@@ -218,7 +218,7 @@ html {
   }
 
   .post-class > h2 {
-    @apply tw-text-[24px] tw-font-semibold tw-border-b-[1px] tw-border-main-color tw-text-slate-300 tw-font-bold;
+    @apply tw-text-[24px] tw-border-b-[1px] tw-border-main-color tw-text-slate-300 tw-font-bold;
   }
 
   .post-class > h3 {
