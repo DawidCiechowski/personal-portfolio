@@ -212,6 +212,26 @@ html {
   body {
     @apply tw-font-primary tw-bg-gradient-to-b tw-from-black tw-to-slate-900 tw-text-text-color tw-min-h-screen;
   }
+
+  .post-class {
+    @apply tw-relative tw-z-10 tw-items-center tw-flex tw-flex-col tw-gap-y-10 tw-text-slate-400 tw-text-[12px] md:tw-text-[16px] lg:tw-text-[20px] tw-p-6 tw-mx-auto
+  }
+
+  .post-class>h2 {
+    @apply tw-text-[24px] tw-font-semibold tw-border-b-[1px] tw-border-main-color tw-text-slate-300 tw-font-bold
+  }
+
+  .post-class>h3 {
+    @apply tw-text-[20px] tw-font-semibold tw-text-slate-300
+  }
+
+  .post-class>h4 {
+    @apply tw-text-slate-300 tw-font-semibold
+  }
+
+  .post-class>ol>li {
+    @apply tw-pb-8
+  }
 }
 
 @layer utilities {

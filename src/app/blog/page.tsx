@@ -32,11 +32,11 @@ export default async function ArticlePage({ searchParams }: BlogPageProps) {
               src={article.header_image}
               alt="Background Image"
               layout="fill"
-              className="-tw-z-10"
+              className="tw-z-12"
             />
             <div className="tw-relative tw-z-10 tw-bg-slate-800 tw-text-white tw-w-full">
               <p className="tw-pb-2 tw-pt-4 tw-pr-2 tw-pl-2">{article.title}</p>
-              <p className="tw-pb-2 tw-pr-2">
+              <p className="tw-pb-2 tw-pl-2">
                 {article.author} - {new Date(article.date).toLocaleDateString()}
               </p>
             </div>
