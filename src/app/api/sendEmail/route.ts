@@ -6,20 +6,23 @@ export async function POST(req: NextRequest) {
 
   // Simple email validation regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
+
   // Server-side email validation
   if (!email || !emailRegex.test(email)) {
-    return NextResponse.json({ success: false, message: 'Invalid email format' }, { status: 400 });
+    return NextResponse.json(
+      { success: false, message: 'Invalid email format' },
+      { status: 400 },
+    );
   }
 
   const transporter = nodemailer.createTransport({
-    service: 'Gmail', 
-    host: "smtp.gmail.com",
+    service: 'Gmail',
+    host: 'smtp.gmail.com',
     port: 465,
     secure: true,
     auth: {
-      user: process.env.SMTP_USER, 
-      pass: process.env.SMTP_PASSWORD, 
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD,
     },
   });
 
@@ -72,8 +75,14 @@ export async function POST(req: NextRequest) {
     await transporter.sendMail(mailToSelfOptions);
     await transporter.sendMail(mailToContactingPersonOptions);
 
-    return NextResponse.json({ success: true, message: 'Emails sent successfully' });
+    return NextResponse.json({
+      success: true,
+      message: 'Emails sent successfully',
+    });
   } catch (error) {
-    return NextResponse.json({ success: false, message: 'Failed to send emails', error }, { status: 500 });
+    return NextResponse.json(
+      { success: false, message: 'Failed to send emails', error },
+      { status: 500 },
+    );
   }
 }

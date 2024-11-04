@@ -1,5 +1,5 @@
-import ExperiencePage from "@/components/ExperiencePage";
-import { educationData } from "@/utils/constants";
+import ExperiencePage from '@/components/ExperiencePage';
+import { educationData } from '@/utils/constants';
 
 const Education = () => {
   return (

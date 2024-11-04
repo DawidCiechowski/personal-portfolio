@@ -1,6 +1,6 @@
-import { Icons } from "@/utils/constants";
-import Link from "next/link";
-import React from "react";
+import { Icons } from '@/utils/constants';
+import Link from 'next/link';
+import React from 'react';
 
 interface SkillsTabProps {
   title: string;
@@ -24,9 +24,9 @@ const SkillShowcase: React.FC<{
     >
       <i className={`${icon}`}></i>
       <div className="tw-text-[5px] md:tw-text-[6px]">
-        {icon.includes("bxl")
-          ? icon.split("bxl-")[1].toUpperCase()
-          : icon.split("-")[1].toUpperCase()}
+        {icon.includes('bxl')
+          ? icon.split('bxl-')[1].toUpperCase()
+          : icon.split('-')[1].toUpperCase()}
       </div>
     </Link>
   );
@@ -56,72 +56,72 @@ const SkillTab: React.FC<{ skillType: string; items: Array<unknown> }> = ({
 const SkillsTab: React.FC<SkillsTabProps> = ({ title, text, skills }) => {
   const skillTypes = [
     {
-      name: "Programming Languages",
+      name: 'Programming Languages',
       //@ts-expect-error Gotta add proper types
       skills: skills.programmingLanguages,
     },
     {
-      name: "Backend",
+      name: 'Backend',
       //@ts-expect-error Gotta add proper types
       skills: skills.backend,
     },
     {
-      name: "Frontend",
+      name: 'Frontend',
       //@ts-expect-error Gotta add proper types
       skills: skills.frontend,
     },
     {
-      name: "Databases",
+      name: 'Databases',
       //@ts-expect-error Gotta add proper types
       skills: skills.databases,
     },
     {
-      name: "Test Frameworks",
+      name: 'Test Frameworks',
       //@ts-expect-error Gotta add proper types
       skills: skills.testFrameworks,
     },
     {
-      name: "Data Science Frameworks",
+      name: 'Data Science Frameworks',
       //@ts-expect-error Gotta add proper types
       skills: skills.dataScience,
     },
     {
-      name: "Mobile",
+      name: 'Mobile',
       //@ts-expect-error Gotta add proper types
       skills: skills.mobile,
     },
     {
-      name: "Containers",
+      name: 'Containers',
       //@ts-expect-error Gotta add proper types
       skills: skills.container,
     },
     {
-      name: "Dependency Management Frameworks",
+      name: 'Dependency Management Frameworks',
       //@ts-expect-error Gotta add proper types
       skills: skills.dependencyManagement,
     },
     {
-      name: "Runtime",
+      name: 'Runtime',
       //@ts-expect-error Gotta add proper types
       skills: skills.runtime,
     },
     {
-      name: "Web Servers",
+      name: 'Web Servers',
       //@ts-expect-error Gotta add proper types
       skills: skills.webServer,
     },
     {
-      name: "Visualization Frameworks",
+      name: 'Visualization Frameworks',
       //@ts-expect-error Gotta add proper types
       skills: skills.visualization,
     },
     {
-      name: "Operating Systems",
+      name: 'Operating Systems',
       //@ts-expect-error Gotta add proper types
       skills: skills.operatingSystems,
     },
     {
-      name: "Other",
+      name: 'Other',
       //@ts-expect-error Gotta add proper types
       skills: skills.other,
     },
@@ -135,7 +135,7 @@ const SkillsTab: React.FC<SkillsTabProps> = ({ title, text, skills }) => {
         {text}
       </p>
       {skillTypes
-        .filter((item) => item.skills.length > 0)
+        .filter(item => item.skills.length > 0)
         .map((item, index) => {
           return (
             <SkillTab key={index} skillType={item.name} items={item.skills} />

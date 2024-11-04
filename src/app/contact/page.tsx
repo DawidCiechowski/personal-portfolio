@@ -1,61 +1,63 @@
 'use client';
 
-import React from "react";
+import React from 'react';
 
 const Contact = () => {
-     const [formData, setFormData] = React.useState({
-       name: "",
-       email: "",
-       message: "",
-     });
-     const [loading, setLoading] = React.useState(false);
-     const [error, setError] = React.useState<string | null>(null);
-     const [success, setSuccess] = React.useState(false);
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
+  const [success, setSuccess] = React.useState(false);
 
-     const handleChange = (
-       e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-     ) => {
-       setFormData({
-         ...formData,
-         [e.target.name]: e.target.value,
-       });
-     };
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-     const handleSubmit = async (e: React.FormEvent) => {
-       e.preventDefault();
-       setLoading(true);
-       setError(null);
-       setSuccess(false);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    setSuccess(false);
 
-       // Assuming validation and form submission here
-       // Simplified for brevity
+    // Assuming validation and form submission here
+    // Simplified for brevity
 
-       try {
-         const response = await fetch("/api/sendEmail", {
-           method: "POST",
-           headers: {
-             "Content-Type": "application/json",
-           },
-           body: JSON.stringify(formData),
-         });
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-         if (!response.ok) {
-           const { message } = await response.json();
-           throw new Error(message || "Failed to send emails");
-         }
+      if (!response.ok) {
+        const { message } = await response.json();
+        throw new Error(message || 'Failed to send emails');
+      }
 
-         setSuccess(true);
-         setFormData({
-           name: "",
-           email: "",
-           message: "",
-         });
-       } catch (err: any) {
-         setError(err.message);
-       } finally {
-         setLoading(false);
-       }
-     };
+      setSuccess(true);
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className=" tw-py-[10rem] tw-px-[6%] lg:tw-px-[12%] tw-w-screen tw-justify-center tw-flex tw-flex-col tw-items-center">
@@ -118,7 +120,7 @@ const Contact = () => {
             disabled={loading}
             className="tw-w-1/4 lg:tw-w-1/12 tw-bg-black tw-border-main-color tw-border-solid tw-border-2 tw-text-white tw-py-3 tw-rounded-md hover:tw-bg-main-color hover:tw-shadow-glow-sm tw-mt-16 hover:tw-text-black tw-duration-300  tw-transition hover:tw-scale-110 tw-text-[1.4rem] sm:tw-text-[1.8rem]"
           >
-            {loading ? "Sending..." : "Send Message"}
+            {loading ? 'Sending...' : 'Send Message'}
           </button>
 
           {/* Error and Success Messages */}
