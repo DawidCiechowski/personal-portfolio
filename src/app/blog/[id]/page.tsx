@@ -49,32 +49,6 @@ const ArticlePage: NextPage<ArticlePageProps> = async ({
 
   return (
     <div className="tw-min-h-full tw-min-w-full tw-flex tw-flex-col tw-gap-y-10 tw-items-center tw-justify-center tw-px-[10%]">
-      {/* <div className=" tw-w-full tw-h-full tw-items-center tw-flex tw-flex-col">
-        <Image
-          src={article.header_image}
-          alt="Background Image"
-          layout="cover"
-          className="-tw-z-[50]"
-          placeholder="blur"
-        />
-        <h1 className="tw-text-[26px] md:tw-text-[34px] tw-font-bold tw-border-b-[2px] tw-rounded-lg tw-border-main-color tw-mb-4 tw-text-slate-300">
-          {article.title}
-        </h1>
-        <h2 className="tw-text-[18px] md:tw-text-[24px] tw-text-slate-400">
-          {article.author} - {new Date(article.date).toLocaleDateString()}
-        </h2>
-        <div className="tw-flex tw-text-white tw-gap-x-2">
-          {' '}
-          TAGS: [
-          {article.tags.map((tag, index) => (
-            <p className="tw-gap-2" key={index}>
-              {tag}
-            </p>
-          ))}
-          ]
-        </div>
-      </div> */}
-
       <ArticleHeader
         imageSrc={article.header_image}
         title={article.title}
