@@ -8,6 +8,7 @@ interface ArticleHeaderProps {
   title: string;
   author: string;
   date: string;
+  tags: string[];
 }
 
 const ArticleHeader: React.FC<ArticleHeaderProps> = ({
@@ -15,6 +16,7 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
   title,
   author,
   date,
+  tags,
 }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -27,19 +29,15 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
       }
     };
 
-    // Initial check
     handleScroll();
 
-    // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup on unmount
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div className={`tw-relative tw-w-screen tw-h-screen`}>
-      {/* Background Image */}
       <Image
         src={imageSrc}
         alt="Article Header Image"
@@ -49,7 +47,6 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
         className={`tw-z-0 tw-duration-150 ${isScrolled ? 'tw-opacity-0' : 'tw-opacity-100'}`}
       />
 
-      {/* Overlay Content */}
       <div
         className={`tw-absolute tw-inset-0 tw-flex tw-flex-col tw-justify-center tw-items-center tw-text-white tw-bg-black tw-bg-opacity-50 tw-transition-opacity tw-duration-500 ${
           isScrolled ? 'tw-opacity-0' : 'tw-opacity-100'
@@ -60,6 +57,13 @@ const ArticleHeader: React.FC<ArticleHeaderProps> = ({
         </h1>
         <p className="tw-text-[18px] md:tw-text-[22px] tw-mb-2">{`By ${author}`}</p>
         <p className="tw-text-[14px] md:tw-text-[16px]">{date}</p>
+        {tags.length > 0 && (
+          <div className="tw-text-[12px] md:tw-text-[14px] tw-text-slate-200 tw-flex tw-gap-x-2">
+            {tags.map((tag, index) => (
+              <p key={index}>{tag}</p>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

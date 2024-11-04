@@ -54,6 +54,7 @@ const ArticlePage: NextPage<ArticlePageProps> = async ({
         title={article.title}
         author={article.author}
         date={new Date(article.date).toLocaleDateString()}
+        tags={article.tags}
       />
       <div className="post-class">
         <ReactMarkdown
@@ -63,9 +64,6 @@ const ArticlePage: NextPage<ArticlePageProps> = async ({
         >
           {article.content}
         </ReactMarkdown>
-        {article.tags.map((tag, index) => (
-          <p key={index}>{tag}</p>
-        ))}
       </div>
     </div>
   );
